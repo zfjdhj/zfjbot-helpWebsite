@@ -50,14 +50,11 @@
                 />
       </van-cell-group>
   </div>
-
-
 </template>
 
 
 <script>
-import {reactive} from "vue"
-import {ref} from "@vue/reactivity";
+import {reactive,ref} from "vue"
 import {Toast} from "vant";
 
 
@@ -774,5 +771,4 @@ export default {
 .van-button__content{
   justify-content: left !important;
 };
-@cell-border-color:#ffbb77;
 </style>
