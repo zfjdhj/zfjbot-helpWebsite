@@ -722,8 +722,7 @@ export default {
       value.value=""
     }
     function noticeBarClick(){
-      console.log("noticeBarClick");
-      window.location="http://pcr.zfjdhj.cn/yobot/help"
+      window.location="/yobot/help"
     }
     let isRes=ref(true)
     let res_list=reactive({data:""})
