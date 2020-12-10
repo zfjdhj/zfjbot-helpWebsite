@@ -33,11 +33,20 @@ jobs:
           npm install
           npm run-script build
 
-      - name: upload
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist # or path/to/artifact
+
+      - name: publish
+        uses: s0/git-publish-subdir-action@master
+        env:
+          REPO: zfjdhj.github.io/zfjbot-helpWebsite
+          BRANCH: master
+          FOLDER: dist
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+
+#      - name: upload
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: dist
+#          path: dist # or path/to/artifact
 
 #      - name: Deploy
 #        uses: JamesIves/github-pages-deploy-action@releases/v3
