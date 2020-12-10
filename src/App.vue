@@ -626,7 +626,7 @@ export default {
         "plugin_direction": "出自漫画《辉夜大小姐想让我告白～天才们的恋爱头脑战～》，规则为参与游戏的每个玩家为下一个玩家设置一个“NG词”， 设置完成后展示之，使得除了自己的每个人都能知道自己的NG词。之后所有玩家进行自由谈话，说出自己的NG词的玩家判负，退场。直至只剩一人为止。",
         "plugin_commands": [{
           "command": "NG词语游戏|NGWordGame|ng",
-          "description": "开始游戏",
+          "description": "开始ng游戏",
         },{
           "command": "sign in",
           "description": "参与游戏",
