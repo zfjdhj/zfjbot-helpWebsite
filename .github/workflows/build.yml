@@ -43,6 +43,15 @@ jobs:
           source_folder: dist
           github_token: ${{ secrets.SECRET_TOKEN }}
 
+      - name: publish2
+        uses: seanmiddleditch/gha-publish-to-git@master
+        with:
+          repository: zfjdhj/zfjbot-helpWebsite
+          target_folder: dist
+          branch: master
+          source_folder: dist
+          github_token: ${{ secrets.SECRET_TOKEN }}
+
 #      - name: upload
 #        uses: actions/upload-artifact@v2
 #        with:
