@@ -21,7 +21,6 @@
       />
     </form>
   </van-sticky>
-
   <div v-for="plugins_list in plugins_data" :key="plugins_list.id" v-show="isRes">
     <van-button type="primary" block>{{plugins_list.plugins_type_name}}</van-button>
     <van-collapse v-model="plugins_list.plugins_type_id" accordion="true" border="false">
