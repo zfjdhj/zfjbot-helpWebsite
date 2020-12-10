@@ -620,6 +620,30 @@ export default {
           "description": "设置推送消息模式 0=标准模式(默认),推送消息包含详情及图片 1=简略模式,推送消息仅包含标题",
         }],
         plugin_notice:""
+      },{
+        "plugin_name": "NgGame",
+        "plugin_service_name":"zfjbot-NgGame",
+        "plugin_direction": "出自漫画《辉夜大小姐想让我告白～天才们的恋爱头脑战～》，规则为参与游戏的每个玩家为下一个玩家设置一个“NG词”， 设置完成后展示之，使得除了自己的每个人都能知道自己的NG词。之后所有玩家进行自由谈话，说出自己的NG词的玩家判负，退场。直至只剩一人为止。",
+        "plugin_commands": [{
+          "command": "NG词语游戏|NGWordGame|ng",
+          "description": "开始游戏",
+        },{
+          "command": "sign in",
+          "description": "参与游戏",
+        },{
+          "command": "stop signing",
+          "description": "停止注册",
+        },{
+          "command": "(私聊)setNG<词语>",
+          "description": "设置NG词",
+        },{
+          "command": "check",
+          "description": "加载所有设置的NG词并开始游戏",
+        },{
+          "command": "stop",
+          "description": "强制终止游戏",
+        }],
+        plugin_notice:""
       }
       ]
     },{
