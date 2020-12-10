@@ -35,12 +35,12 @@ jobs:
 
 
       - name: publish
-        uses: s0/git-publish-subdir-action@master
-        env:
-          REPO: zfjdhj.github.io/zfjbot-helpWebsite
-          BRANCH: master
-          FOLDER: dist
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+        uses: seanmiddleditch/gha-publish-to-git@master
+        with:
+          repository: zfjdhj.github.io
+          branch: master
+          source_folder: dist
+          github_token: ${{ secrets.SECRET_TOKEN }}
 
 #      - name: upload
 #        uses: actions/upload-artifact@v2
