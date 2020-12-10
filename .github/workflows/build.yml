@@ -37,7 +37,7 @@ jobs:
       - name: publish
         uses: seanmiddleditch/gha-publish-to-git@master
         with:
-          repository: zfjdhj/zfjdhj.github.io
+          repository: zfjdhj/zfjdhj.github.io/zfjbot-helpWebsite
           branch: master
           source_folder: dist
           github_token: ${{ secrets.SECRET_TOKEN }}
