@@ -87,20 +87,14 @@ export default {
             }
           }
           return res_list
-        }else if(typeof data === "string"){
-          if (command && command !== data){
-            if(data.indexOf(val) > -1){
-              let res_data={
-                "plugin_name":plugin_name,
-                "command":command,
-                "description":data,
-              }
-              res_list.push(res_data)
-              return res_list
+        }else if(typeof data === "string" && command && command !== data && data.indexOf(val) > -1){
+            let res_data={
+              "plugin_name":plugin_name,
+              "command":command,
+              "description":data,
             }
+            res_list.push(res_data)
             return res_list
-          }
-          return res_list
         }else{
           return res_list
         }
