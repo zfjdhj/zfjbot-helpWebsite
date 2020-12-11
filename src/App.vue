@@ -21,7 +21,7 @@
       />
     </form>
   </van-sticky>
-  <div v-for="plugins_list in plugins_data" :key="plugins_list.id" v-show="isRes">
+  <div v-for="plugins_list in plugins_data.data" :key="plugins_list.id" v-show="isRes">
     <van-button type="primary" block>{{plugins_list.plugins_type_name}}</van-button>
     <van-collapse v-model="plugins_list['plugins_type_id']" accordion="true" border="false">
       <van-collapse-item v-for="(plugin,index) in plugins_list['plugins_list']" :key="plugin['id']" :name=index>
@@ -55,12 +55,21 @@
 <script>
 import {reactive,ref} from "vue"
 import {Toast} from "vant";
-import plugins_data_json from "../public/data.json"
-
+// import plugins_data_json from "../public/data.json"
+import axios from "axios"
 
 export default {
   name: 'App',
   setup(){
+    let plugins_data=reactive({data:""})
+      axios.get("/data.json").then(function (res) {
+        plugins_data.data=res.data
+        console.log(plugins_data);
+        return res
+      }).catch(function (err) {
+        console.log(err);
+        return err
+      })
 
     function search(data,val,plugin_name,command,data_list){
       let res_list=data_list
@@ -117,7 +126,7 @@ export default {
     let isRes=ref(true)
     let res_list=reactive({data:""})
     let value=ref("")
-    let plugins_data=reactive(plugins_data_json)
+    console.log(plugins_data);
     return {
       plugins_data,
       onSearch,
