@@ -62,14 +62,12 @@ export default {
   name: 'App',
   setup(){
     let plugins_data=reactive({data:""})
-      axios.get("data.json").then(function (res) {
-        plugins_data.data=res.data
-        console.log(plugins_data);
-        return res
-      }).catch(function (err) {
-        console.log(err);
-        return err
-      })
+    axios.get("data.json").then(function (res) {
+      plugins_data.data=res.data
+      console.log(plugins_data);
+    }).catch(function (err) {
+      console.log(err);
+    })
 
     function search(data,val,plugin_name,command,data_list){
       let res_list=data_list
