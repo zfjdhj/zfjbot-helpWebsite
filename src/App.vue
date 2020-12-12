@@ -115,7 +115,7 @@ export default {
       value.value=""
     }
     function noticeBarClick(){
-      window.location="/yobot/help"
+      window.location="yobot/help"
     }
     let isRes=ref(true)
     let res_list=reactive({data:""})
