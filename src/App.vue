@@ -62,7 +62,7 @@ export default {
   name: 'App',
   setup(){
     let plugins_data=reactive({data:""})
-      axios.get("/data.json").then(function (res) {
+      axios.get("data.json").then(function (res) {
         plugins_data.data=res.data
         console.log(plugins_data);
         return res
