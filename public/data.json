@@ -142,6 +142,18 @@
           "description": "查看机器人版本"
         }],
         "plugin_notice":"当管理员希望机器人离开群聊时，应该使用此条命令而不是直接踢出群聊，避免增加封号风险"
+      },{
+        "plugin_name": "yobot数据库",
+        "plugin_service_name":"zfjbot",
+        "plugin_direction": "",
+        "plugin_commands": [{
+          "command": "查看数据",
+          "description": "查看今日报道数据"
+        },{
+          "command": "修改数据 <旧数据> <新数据>",
+          "description": "修改某一条报刀数据"
+        }],
+        "plugin_notice":"修改数据库相关数据，仅限当天"
       }]
   },
   {
