@@ -1,0 +1,1052 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title>猫猫使用手册</title>
+    <link rel="icon" href="http://resource.zfjdhj.cn/images/ico/pcr.zfjdhj.cn.png" type="image/x-icon">
+    <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--made by Github/crovo007 -->
+    <meta name="description" Content="机器人功能指令说明">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+
+        .footnote {
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="markdown-body">
+<!--    <audio autoplay loop><source src="https://link.hhtjim.com/163/459925524.mp3"></audio>-->
+    <h1>猫猫使用手册</h1>
+    <h3>本群维护 纸飞机</h3>
+    <p>目前框架Hoshino+cqhttp-mirai</p>
+    <p><b>快速查阅:</b><br>
+        <a href="#1"><del>如何报刀？</del></a><br>
+		<a href="#user-content-指令列表">如何自动报刀？</a><br>
+		<a href="#2">如何登陆管理界面？</a><br>
+		<a href="#3">如何进行各项查询？</a>
+		<!--<br><a href="#4">如何抽卡？</a></p>-->
+    <h2>前言</h2>
+    <p>欢迎您使用猫猫bot！接下来，本手册将详细介绍本bot的各项功能。<b>若您是初次使用，推荐先查看上方的"快速查阅"栏目。您也可以使用Ctrl+F快速在页面中查找。对于手机，请使用"页面内查找"。</b>如有疑惑，请询问维护组。
+    </p>
+    <h3>指令标记说明：</h3>
+    <p><b>(at)</b>标记代表该命令需要at机器人</p>
+	<p>使用昵称=at机器人</p>
+    <p><b>(管理员/维护组)</b>标记表示功能需要管理员或维护组权限 </p>
+    <p><b>(自动)</b>标记启用后无需手动触发，会自动推送或执行 </p>
+    <p>方括号表示参数可以省略</p>
+    <p>命令中间的"+"无需输入</p>
+    <p><b>如无特殊说明，所有功能仅群聊可用。</b></p>
+    <h3>本群服务启禁用说明：</h3>
+    <p>在群聊中发送"lssv -a"<b>(请注意此处有空格)</b>以查看所有服务，其中服务名称前带|○|表示该服务已启用，带|×|表示服务已禁用。发送"禁用/启用 服务名"<b>(请注意此处也有空格，如：禁用 gacha)</b>以禁用/启用某个服务<sup class="footnote">1</sup></p>
+    <p><sup class="footnote">1</sup>注：本指令要求管理员以上权限</p>
+    <h2>会战核心功能</h2>
+<!--    <h3>box统计&存轴器</h3>-->
+<!--    <h4></h4>-->
+<!--    <p>box统计：发送"帮助pcrbox统计"查看帮助-->
+<!--    <br>存轴器：发送"帮助pcr轴"查看帮助</p>-->
+<!--    <p style=color:red><b>注意：初次使用时需要设置数据库名称，请设置不少于六个字符的名称，避免被其他人通过"切换数据库"命令读取。</b></p>-->
+    <h3><a id="1">会战管理</a></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>手册</td>
+                <td>查看公会战使用手册</td>
+            </tr>
+            <tr>
+                <td>面板</td>
+                <td>进入公会战面板</td>
+            </tr>
+            <tr>
+                <td>创建日服公会</td>
+                <td>日/韩/台/国，创建后可在后台修改</td>
+            </tr>
+            <tr>
+                <td>加入公会 [@某人]</td>
+                <td>加入到公会名单，如果有at则为加入他人</td>
+            </tr>
+            <tr>
+                <td><b>(管理员)</b>加入全部成员</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>报刀2000000 [@某人] [昨日] [:留言]</td>
+                <td>
+                    对boss造成伤害但未击败时用，记录伤害，可以使用 200w/200万/2000k 等（一般公会精确到万即可）<br>
+                    如果有at则为代报，有冒号则为留言<br>
+                    如果有“昨日”则将记录添加到前一天<sup class="footnote">2</sup>
+                </td>
+            </tr>
+            <tr>
+                <td>尾刀 [@某人] [昨日] [:留言]</td>
+                <td>
+                    对boss造成伤害并击败时用，记录伤害<br>
+                    如果有at则为代报，有冒号则为留言<br>
+                    如果有“昨日”则将记录添加到前一天<sup class="footnote">2</sup>
+                </td>
+            </tr>
+            <tr>
+                <td>SL [@某人] [？]</td>
+                <td>挑战boss强制取消后用，记录本日SL<sup class="footnote">3</sup>，用“？”查询今日是否已 SL<br>
+                    如果有at则为代报
+                </td>
+            </tr>
+            <tr>
+                <td>撤销</td>
+                <td>撤销上一次报刀（非管理员只能撤销自己的记录）</td>
+            </tr>
+            <tr>
+                <td>状态</td>
+                <td>显示boss状态</td>
+            </tr>
+            <tr>
+                <td>预约1 [:留言]</td>
+                <td>预约boss，当boss出现时通知，有冒号则为留言</td>
+            </tr>
+            <tr>
+                <td>挂树 [:留言]</td>
+                <td>挂树，当boss被击败时通知</td>
+            </tr>
+            <tr>
+                <td>查1 / 查树</td>
+                <!--made by Github/crovo007 -->
+                <td>查询预约boss的成员，查询挂树的成员</td>
+            </tr>
+            <tr>
+                <td>取消预约1 / 取消1</td>
+                <td>取消预约</td>
+            </tr>
+            <tr>
+                <td>申请出刀</td>
+                <td>锁定boss，提醒后面申请出刀的人有人正在挑战boss</td>
+            </tr>
+            <tr>
+                <td>锁定:留言</td>
+                <td>锁定boss，提醒后面申请出刀的人，冒号后为留言</td>
+            </tr>
+            <tr>
+                <td>解锁</td>
+                <td>解锁boss，其他人可以继续申请<sup class="footnote">4</sup></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <sup class="footnote">2</sup>此功能是在日期变更后<b>(游戏中是以凌晨四点(日服)/凌晨五点(国台服)为界)</b>，将出刀记录添加到前一天。例如日服中03:59完成出刀，在04:01时向机器人报刀则需要加上[昨日]<br>
+        <sup class="footnote">3</sup>在公会战面板的“查刀”页中，可以查看所有人今日是否已使用SL<br>
+        <sup class="footnote">4</sup>此功能既可以用于主动结束锁定，也可以用户强制取消他人的解锁。本人或管理员可以随意解锁，3分钟后“出刀”可以被任何人解锁，“锁定”没有时间限制 </p>
+	<h2><a id="user-content-指令列表" class="anchor" aria-hidden="true" href="https://github.com/zyujs/clanbattle_info"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>自动报刀</h2>
+	<h4>需启用clanbattle_info服务</h4>
+	<p>本插件的全部命令都有前缀 <code>cbi</code>可以替换为<code>自动报刀</code></p>
+	<ul>
+	<li><code>cbi 帮助</code> : 获取帮助信息</li>
+	<li><code>cbi 总表</code> : 查询公会总表</li>
+	<li><code>cbi 日总表 [n]</code> : 查询公会日表, n表示会战第n天, 不带n参数默认为第1天.</li>
+	<li><code>cbi 日出刀表 [n]</code> : 查询公会日表, n表示会战第n天, 不带n参数默认为第1天.</li>
+	<li><code>cbi boss出刀表 [n]</code> : 查询boss出刀表, n为boss编号, 取值为1-5.</li>
+	<li><code>cbi boss状态</code> : 查询boss状态</li>
+	<li><code>cbi 状态</code> : 查看插件当前状态</li>
+	<li><code>cbi 检查成员</code> : 检查公会成员是否全部有对应QQ号码.</li>
+	<li><code>cbi 绑定 游戏昵称 [bot/@某人]</code> : 将指定游戏昵称绑定本qq号码或者指定qq号码, 适用于游戏昵称和群名片不匹配的情况, 加入bot表示将该昵称绑定为bot自己的qq号码. 如果游戏昵称有空格, 请将昵称放置在[]中.</li>
+	<li><code>cbi 解除绑定 游戏昵称</code> : 解除绑定</li>
+	<li><code>cbi 查看绑定</code> : 查看当前的绑定列表</li>
+	<li><code>cbi 绑定未知成员 bot/@某人</code> : 将指定所有找不到对应qq的游戏昵称绑定给指定qq号码, 适用于部分成员不在群内的情况, bot表示将该昵称绑定为bot自己的qq号码,使用该功能必须参照下方常见问题解除yobot出刀限制.</li>
+	<li><code>cbi 解除绑定未知成员</code> : 禁用上述功能</li>
+	<li><code>cbi 继续报刀</code> : 继续自动报刀, 当自动报刀因错误暂停时, 请在排除错误后使用该命令继续报刀.</li>
+	<li><code>cbi 暂停报刀</code> : 暂停自动报刀</li>
+	<li><code>cbi 重置推送进度</code> : 重置推送进度, 下一次将从第一条出刀记录重新开始推送.</li>
+	<li><code>cbi 重置报刀进度</code> : 重置报刀进度, 从第一条出刀记录重新同步报刀进度, 适用于清空yobot记录后需要重新开始报刀的情况.</li>
+	<li><code>cbi 初始化</code> : 重新加载群数据, 修改config文件后可以使用本指令重新加载数据.</li>
+	</ul>
+	<p><strong>注意</strong>: 使用自动报刀的公会, 不能有重名的成员, 插件无法区分同名会员. 如果插件提示未知游戏昵称, 需要使用绑定指令为指定游戏昵称绑定成员qq. 本插件不限制每个qq号码绑定的游戏昵称数量, 但请注意yobot本身的每账号每天3刀的限制, 有特殊需求请自行修改Yobot相关代码.</p>
+
+    <h3><a id="2">管理系统</a></h3>
+    <h4>注：群管理员有时可能不会获得后台的管理权限，如出现此种情况，请联系维护组更改。</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>登录</td>
+                <td>登录进入Web模式<sup class="footnote">5</sup>
+            </tr>
+            <tr>
+                <td>重置密码</td>
+                <td>随机生成一个新密码（不发链接）</td>
+            </tr>
+            <tr>
+                <td><b>(管理员)</b>退出此群</td>
+                <td>命令机器人退出当前群聊<sup class="footnote">6</sup></td>
+            </tr>
+            <tr>
+                <td>version</td>
+                <td>查看机器人版本</td>
+            </tr>
+            <tr>
+                <td>帮助</td>
+                <td>查看帮助</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><sup class="footnote">5</sup>如果不知道密码，请先发送"重置密码"</p>
+    <p style=color:red;font-size:120%><sup class="footnote">6</sup>当管理员希望机器人离开群聊时，应该使用此条命令而不是直接踢出群聊，避免增加封号风险</p>
+    <h2>会战附属功能</h2>
+    <h3><a id="3">查询类</a></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>怎么拆 +5个角色名空格分隔</td>
+                <td>查找jjc解法，指定区服可改用“b怎么拆/台怎么拆/日怎么拆”<br><b>需启用pcr-arena服务</b></td>
+            </tr>
+            <tr>
+                <td>pcr速查</td>
+                <td>pcr的主要攻略和数据站速览</td>
+            </tr>
+            <tr>
+                <td>bcr速查</td>
+                <td>国服萌新攻略</td>
+            </tr>
+            <tr>
+                <td>日/台/陆rank表</td>
+                <td>查看各服rank推荐表</td>
+            </tr>
+            <tr>
+                <td>黄骑充电表</td>
+                <td>黄骑1动规律</td>
+            </tr>
+            <tr>
+                <td>谁是xcw</td>
+                <td>角色别称查询</td>
+            </tr>
+            <tr>
+                <td>挖矿计算 +当前名次</td>
+                <td>计算剩余可获得的奖励钻石</td>
+            </tr>
+            <tr>
+                <td>一个顶俩</td>
+                <td>台服接龙小游戏</td>
+            </tr>
+            <tr>
+                <td>B/台服新闻</td>
+                <td>显示最新的B/台服新闻</td>
+            </tr>
+            <tr>
+                <td>官漫132</td>
+                <td>阅读指定话(汉化更新至200话)<br><b>需启用pcr-comic服务</b></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>公会排名查询</h3>
+    <h4>需启用epck服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>会战排名+公会名/排名</td>
+                <td>查看指定名字或指定排名的公会排名</td>
+            </tr>
+            <tr>
+                <td>会战锁定+公会名</td>
+                <td>绑定本群的公会</td>
+            </tr>
+            <tr>
+                <td>会战解锁+公会名</td>
+                <td>解绑本群的公会</td>
+            </tr>
+            <tr>
+                <td>公会排名</td>
+                <td>查询本群绑定的公会的排名信息</td>
+            </tr>
+            <tr>
+                <td><b>(自动)</b>公会排名推送</td>
+                <td>每天早5点30分自动推送本群绑定的公会的排名信息</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><b style="color:red">注：请在结束会战后取消公会绑定，并在下一次会战开始前重新绑定，否则非会战期间也会推送排名信息。</b></p>
+	<h3>会战报告相关<sup class="footnote">7</sup></h3>
+	<h4>需启用"离职报告"服务</h4>
+	<table>
+		<thead>
+		<tr>
+			<th>关键词</th>
+			<th>说明</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>生成离职报告</td>
+			<td>生成一张离职报告</td>
+		</tr>
+		<tr>
+			<td>生成会战报告[@某人]</td>
+			<td>生成一张会战报告</td>
+		</tr>
+		</tbody>
+	</table>
+	<p>
+    <sup class="footnote">7</sup>注:为保证生成合理报告，会战期间我会尽量保证数据库正确<br>PS:有的人不喜欢报刀</p>
+	<h2><a id="user-content-指令列表" class="anchor" aria-hidden="true" href="#指令列表"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>活动日程</h2>
+	<ul>
+		<li><code>日历</code> : 查看本群订阅服务器日历</li>
+		<li><code>[国台日]服日历</code> : 查看指定服务器日程</li>
+		<li><code>[国台日]服日历 on/off</code> : 订阅/取消订阅指定服务器的日历推送</li>
+		<li><code>日历 time 时:分</code> : 设置日历推送时间</li>
+		<li><code>日历 status</code> : 查看本群日历推送设置</li>
+	</ul>
+		
+<!--    <h3>订阅类</h3>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>关键词</th>-->
+<!--                <th>说明</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            <tr>-->
+<!--                <td><b>(自动)</b>日/台/国服背刺时间提醒</td>-->
+<!--                <td><b>需启用pcr-arena-reminder-jp(日服)或pcr-arena-reminder-tw(国台服)服务</b></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><b>(自动)</b>官方四格漫画更新提示(日文)</td>-->
+<!--                <td></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><b>(自动)</b>整点报时</td>-->
+<!--                <td><b>需启用hourcall服务</b></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><b>(自动)</b>新闻推送</td>-->
+<!--                <td>推送最新的新闻<br><b>需启用pcr-news-bili(B服)或pcr-news-tw(台服)或pcr-twitter(日服，暂时关闭)服务</b></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><b>(自动)</b>提醒买药小助手(国/台服)</td>-->
+<!--                <td>每天0、6、12、18点提醒买药(UTC+8)<br><b>需启用hourcallyao服务</b></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><b>(自动)</b>提醒买药小助手(日服)</td>-->
+<!--                <td>每天0、6、12、18点提醒买药(UTC+9)<br><b>需启用hourcallyaojp服务</b></td>-->
+<!--            </tr>-->
+<!--    </table>-->
+    <h2>娱乐及实用类功能</h2>
+		<h3><a id="4">抽卡</a></h3>
+		<h4>需启用gacha服务</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>关键词</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>猫猫单抽</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>猫猫十连</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>猫猫来一井<sup class="footnote">7</sup></td>
+					<td>45000钻，300抽</td>
+				</tr>
+				<tr>
+					<td><b>(管理员)</b>氪金@氪金者</td>
+					<td>增加一次抽一井的机会</td>
+				</tr>
+				<tr>
+					<td>查看卡池</td>
+					<td>查看当期up及出率</td>
+				</tr>
+				<tr>
+					<td>切换卡池</td>
+					<td>可切换B/台/日服卡池</td>
+				</tr>
+				<tr>
+					<td>更新卡池</td>
+					<td>卡池数据延迟时可以使用</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><sup class="footnote">7</sup>一天只能抽一井，如需多抽，请使用氪金命令</p>
+		<h3>切噜语</h3>
+		<h4>需启用pcr-cherugo服务</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>关键词</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>切噜一下</td>
+					<td>转换为切噜语</td>
+				</tr>
+				<tr>
+					<td>切噜～♪切啰巴切拉切蹦切蹦</td>
+					<td>切噜语翻译</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>签到</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>关键词</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>签到</td>
+					<td>给主さま盖章章(随机图样哦)</td>
+				</tr>
+			</tbody>
+		</table>
+<!--    <h3>生成器</h3>-->
+<!--    <h4>需启用generator服务</h4>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>关键词</th>-->
+<!--                <th>说明</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            <tr>-->
+<!--                <td>营销号生成器</td>-->
+<!--                <td>使用"营销号 主体/事件/另一种说法"命令生成</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>狗屁不通生成器</td>-->
+<!--                <td>使用"狗屁不通 主题"命令生成</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>记仇表情包生成器</td>-->
+<!--                <td>使用"记仇 天气/主题"命令生成</td>-->
+<!--            </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+    <h3>掷骰子</h3>
+    <h4>需启用dice服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.r</td>
+                <td>掷骰子(默认1d100)</td>
+            </tr>
+            <tr>
+                <td>.r 3d12</td>
+                <td>掷3次12面骰子</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>我问你答</h3>
+    <h4>需启用eqa服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>关键词</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>我问A你答B</td>
+                <td>设置自定义答复(仅对设置人有效)[支持图片回复]</td>
+            </tr>
+            <tr>
+                <td><b>(管理员)</b>大家问/有人问A你答B</td>
+                <td>设置自定义答复(对所有人有效)[支持图片]</td>
+            </tr>
+            <tr>
+                <td>不要回答+问题</td>
+                <td>删除自定义答复<b>(非管理员只能删除自己的问题)</b></td>
+            </tr>
+            <tr>
+                <td>全部问答</td>
+                <td>查看本群所有自定义答复</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>reply(自定义回复)</h3>
+    <h4>指令(SUPERUSER使用)</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>fullmatch<触发词>#<回复></td>
+                <td>完全匹配[网页端支持图片回复]</td>
+            </tr>
+            <tr>
+                <td>keyword<触发词>#<回复></td>
+                <td>关键词匹配[网页端支持图片回复]</td>
+            </tr>
+            <tr>
+                <td>rex<触发词>#<回复></td>
+                <td>正则匹配[网页端支持图片回复]</td>
+            </tr>
+            <tr>
+                <td>删除fullmatch\|keyword\|rex<触发词>|</td>
+                <td>删除对应关键词
+                    <a href="http://zfjdhj.cn:9023/login">网页操作(仅限我)</a> </td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>表情生成器</h3>
+    <h4>需启用“表情生成器”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>表情列表</td>
+                <td>查看目前有哪些表情</td>
+            </tr>
+            <tr>
+                <td>刷新表情</td>
+                <td>更新表情库</td>
+            </tr>
+            <tr>
+                <td>生成表情 <表情名字> <文案></td>
+                <td>生成一张表情包</td>
+            </tr>
+            <tr>
+                <td>查看表情 <表情名字></td>
+                <td>查看一张表情</td>
+            </tr>
+            <tr>
+                <td><表情文字>.jpg</td>
+                <td>查看一张表情</td>
+            </tr>
+			<tr>
+                <td>上传表情 <表情名字> <表情图片></td>
+                <td>上传一张表情</td>
+            </tr>
+			<tr>
+                <td>删除表情 <表情名字></td>
+                <td>删除一张表情</td>
+            </tr>
+            <tr>
+                <td>表情管理@bot</td>
+                <td><a href="http://zfjdhj.cn:9023/meme">网页操作(仅限我)</a> </td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>简单识图</h3>
+    <h4>需启用“picfinder”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>识图+图片</td>
+                <td>大概率找不到，猫猫真笨</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>高级识图</h3>
+    <h4>外挂插件“cq-picsearcher-bot”</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[猫猫搜图][图片]</td>
+                <td>开始识别图片</td>
+            <tr>
+                <td>[谢谢猫猫]</td>
+                <td>结束识图</td>
+            </tr>
+        </tbody>
+    </table>
+	
+	<h3>点歌</h3>
+    <h4>需启用“music”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>点歌+歌名</td>
+                <td>在网易云，qq音乐上搜索歌曲</td>
+            </tr>
+			<tr>
+                <td>选择[数字]</td>
+                <td>在返回结果中选择</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>抽签</h3>
+    <h4>需启用“portune”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[抽签|人品|运势|抽凯露签]</td>
+                <td>随机角色/指定凯露预测今日运势</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>猜角色</h3>
+    <h4>需启用“descgass”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>猜角色</td>
+                <td>开始小游戏</td>
+            </tr>
+            <tr>
+                <td>猜角色排行榜</td>
+                <td>本群排行榜</td>
+            </tr>
+        </tbody>
+    </table>	
+	<h3>猜头像</h3>
+    <h4>需启用“avatargass”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>猜头像</td>
+                <td>开始小游戏</td>
+            </tr>
+            <tr>
+                <td>猜头像排行榜</td>
+                <td>本群排行榜</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>猜语音</h3>
+    <h4>需启用“voiceguess”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cygames</td>
+                <td>开始小游戏</td>
+            </tr>
+            <tr>
+                <td>猜语音排行榜</td>
+                <td>本群排行榜</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>猜明日方舟干员</h3>
+    <h4>需启用“arkavatarguess”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>猜干员</td>
+                <td>开始小游戏</td>
+            </tr>
+            <tr>
+                <td>猜干员排行榜</td>
+                <td>本群排行榜</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>猜语音-方舟版</h3>
+    <h4>需启用“voiceguess”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>arknights</td>
+                <td>开始小游戏</td>
+            </tr>
+            <tr>
+                <td>猜方舟排行榜</td>
+                <td>本群排行榜</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>猜群友</h3>
+    <h4>需启用“memberguess”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>猜群友</td>
+                <td>开始小游戏</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>俄罗斯轮盘</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[俄罗斯轮盘|开枪|rs]</td>
+                <td>第一人命令装弹，其余人命令参与游戏</td>
+            </tr>
+        </tbody>
+    </table>
+	
+	
+	<h3>网络语翻译</h3>
+    <h4>需启用“nbnhhsh”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[??][首字母缩写词]</td>
+                <td>释义</td>
+            </tr>
+        </tbody>
+    </table>
+	<h3>随机pcr语音</h3>
+    <h4>需启用“pcr-record”服务</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>指令</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>角色+语音</td>
+                <td>随机一句角色语音</td>
+            </tr>
+        </tbody>
+    </table>	
+	<h3>戳机器人集卡小游戏</h3>
+    <h4>需启用“poke-man-pcr”服务</h4>
+    <table>
+		<thead>
+			<tr>
+				<th>指令</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>查看仓库</td>
+				<td>查看自己的仓库、卡片收集情况和排名</td>
+			</tr>
+			<tr>
+				<td>查看仓库 [@某人]</td>
+				<td>查看指定群友的仓库、卡片收集情况和排名</td>
+			</tr>
+			<tr>
+				<td>献祭 [卡片1昵称] [卡片2昵称]</td>
+				<td>献祭两张卡片以获得一张新的卡片。如是稀有卡片请在卡片昵称前加上"稀有"二字，如"稀有黑猫"</td>
+			</tr>
+			<tr>
+				<td>交换 [卡片1昵称] [@某人] [卡片2昵称]</td>
+				<td>向某人发起卡片交换请求，用自己的卡片1交换他的卡片2。同样，如是稀有卡片请在卡片昵称前加上"稀有"二字。</td>
+			</tr>
+			<tr>
+				<td>确认交换</td>
+				<td>收到换卡请求后一定时间内输入这个指令可完成换卡</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>pcr海豹杀手</h3>
+    <h4>需启用“pcr-seal-killer”服务</h4>
+    <table>
+		<thead>
+			<tr>
+				<th>指令</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>启用海豹杀手 [海豹判定阈值]</td>
+				<td>在当前群启用海豹杀手插件。如果不输入参数，默认阈值是100抽，小于100抽出货的均判定为海豹。</td>
+			</tr>
+			<tr>
+				<td>禁用海豹杀手</td>
+				<td>在当前群禁用海豹杀手插件。</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>rss订阅</h3>
+    <h4>需启用“rss”服务</h4>
+	<ul>
+		<li><code>rss help</code> : 查看帮助</li>
+		<li><code>rss add rss地址</code> : 添加rss订阅,需使用完整rss订阅网址.</li>
+		<li><code>rss addb up主id</code> 或 <code>rss add-bilibili up主id</code> : 添加b站up主订阅</li>
+		<li><code>rss addr route</code> 或 <code>rss add-route route</code> : 添加rsshub route订阅, route请查询rsshub文档.</li>
+		<li><code>rss list</code> : 查看订阅列表</li>
+		<li><code>rss rm 序号</code> 或 <code>rss remove 序号</code> : 删除订阅列表指定项</li>
+		<li><code>rss mode 模式id</code> : 设置推送消息模式 0=标准模式(默认),推送消息包含详情及图片 1=简略模式,推送消息仅包含标题</li>
+	</ul>
+	
+	
+	<h3>实验性功能</h3>
+    <h4>测试用</h4>
+		<table>
+		<thead>
+			<tr>
+				<th>指令</th>
+				<th>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>[字符画][图片]</td>
+				<td>生成字符画</td>
+			</tr>
+			<tr>
+				<td>..</td>
+				<td>..</td>
+			</tr>
+		</tbody>
+	</table>
+		
+	<h3>关于setu</h3>
+<!--    <h4>本地图库需启用“setu”服务</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>指令</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>[色瑟涩]图</td>
+					<td>随机涩图</td>
+				</tr>
+			</tbody>
+		</table>
+		-->
+		
+	<h4>网络图库API1需启用“涩图<sup class="footnote">8</sup>”服务</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>指令</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>[1-10][色瑟涩]图</td>
+					<td>随机涩图</td>
+				</tr>
+				<tr>
+					<td>[色瑟涩]图<关键词></td>
+					<td>搜索涩图(当前默认返回10张)<sup class="footnote">9</sup></td>
+				</tr>
+				<tr>
+					<td>不够[色瑟涩]</td>
+					<td>r18涩图</td>
+				</tr>
+				<tr>
+					<td>本群/群<群号>涩图[不]撤回</td>
+					<td>[不]撤回（60s）</td>
+				</tr>
+				<tr>
+					<td>本群/群<群号>r18开启/关闭</td>
+					<td>r18开启/关闭</td>
+				</tr>
+			</tbody>
+		</table>
+    <p>
+    <sup class="footnote">8</sup>注:采用lolicon.api<br>
+    具体图库质量参见官方文档<a href="https://api.lolicon.app/#/setu">Lolicon API</a>
+    <br>目前图量<br>
+    Total:12748,R18:2318,Illustrator:1954
+    </p>
+    <p>
+    <sup class="footnote">9</sup>注:搜索没有回复，那就是被tx吞消息了，过段时间再试试吧。</p>
+	
+<!--	<h4>网络图库API2需启用“acggov”服务</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>指令</th>
+					<th>说明</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>[色瑟涩]图</td>
+					<td>r18涩图</td>
+				</tr>
+				<tr>
+					<td>修改涩图模式</td>
+					<td>高清图/缩略图</td>
+				</tr>
+				<tr>
+					<td>看涩图</td>
+					<td>未测试</td>
+				</tr>
+				<tr>
+					<td>本日涩图排行榜</td>
+					<td>未测试</td>
+				</tr>
+			</tbody>
+		</table>
+		-->
+<!--    <h3>精 致 睡 眠</h3>-->
+<!--    <h4>需启用sleeping-set服务</h4>-->
+<!--    <h4>注：本功能需要bot是当前群的管理员，否则不会生效</h4>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>关键词</th>-->
+<!--                <th>说明</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            <tr>-->
+<!--                <td>精致睡眠</td>-->
+<!--                <td>8小时精致睡眠</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>给我来一份精致昏睡下午茶套餐</td>-->
+<!--                <td>叫114514杯先 辈 特 调 红 茶</td>-->
+<!--            </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--    <h3>其他杂项功能</h3>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>关键词</th>-->
+<!--                <th>说明</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tbody>-->
+<!--            <tr>-->
+<!--                <td>搜无损+名字</td>-->
+<!--                <td>搜索无损音乐<br><b>需启用flac服务</b></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>来杯咖啡+内容</td>-->
+<!--                <td><b>(不建议采用此种方法，请直接私聊)</b>向维护组发送反馈信息</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>今日运势(vtb版)</td>-->
+<!--                <td>以下命令均可:抽签、今日人品、今日运势、人品、运势、小狐狸签、吹雪签<br><b>需启用vortune服务</b></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td><b>(at)</b>网抑云/上号</td>-->
+<!--                <td>随机来句网抑云语录<br><b>需启用hiumsentences服务</b></td>-->
+<!--            </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+    <h2>致谢</h2>
+    <p>本bot使用了以下开源或非开源的项目或程序，在此向他们表示感谢：<br>
+        <a href="http://cqp.cc" target="_blank">酷Q</a>、<a href="http://yobot.win/" target="_blank">yobot</a>、<a
+            href="https://github.com/Ice-Cirno/HoshinoBot" target="_blank">HoshinoBot</a>、<a href="https://github.com/Tsuk1ko/CQ-picfinder-robot" target="_blank">CQ-picfinder-robot</a>、以及众多的Hoshino和酷Q插件。</p>
+
+</body>
+
+</html>

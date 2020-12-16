@@ -28,6 +28,9 @@
         <template #title>
           <div>{{plugin["plugin_name"]}}</div>
         </template>
+        <template #value>
+          <div>{{plugin["plugin_service_name"]}}</div>
+        </template>
         <van-cell-group border="false">
           <van-cell title="指令" value="功能"/>
           <van-cell v-for="command in plugin['plugin_commands']" :key="command.id"
