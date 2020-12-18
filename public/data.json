@@ -7,6 +7,7 @@
         "plugin_name": "会战管理",
         "plugin_service_name":"Yobot",
         "plugin_direction": "会战核心功能",
+        "plugin_state": "",
         "plugin_commands": [
           {
             "command": "手册",
@@ -75,6 +76,7 @@
         "plugin_name": "自动报刀",
         "plugin_service_name":"clanbattle_info",
         "plugin_direction": "自动报刀相关，前缀cbi可以替换为自动报刀",
+        "plugin_state": "Broken",
         "plugin_commands": [
           {
             "command": "cbi 帮助",
@@ -137,6 +139,7 @@
         "plugin_name": "筛刀",
         "plugin_service_name":"筛刀",
         "plugin_direction": "filter_knife",
+        "plugin_state": "",
         "plugin_commands": [
           {
             "command": "筛刀帮助",
@@ -160,9 +163,36 @@
         "plugin_notice":""
       },
       {
+        "plugin_name": "bot群管",
+        "plugin_service_name":"groupmaster",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [{
+          "command": "<辱骂bot>",
+          "description": "口球8小时"
+        },{
+          "command": "<gbf链接>",
+          "description": "识破骑空士的阴谋"
+        },{
+          "command": "<chat>",
+          "description": "一些关键词回复"
+        },{
+          "command": "(自动)group_increase|group_decrease.leave",
+          "description": "入群欢迎，退群通知"
+        },{
+          "command": "(自动)random-repeater",
+          "description": "随机复读"
+        },{
+          "command": "精致睡眠|给我来一份精致昏睡下午茶套餐",
+          "description": "禁言一定时长"
+        }],
+        "plugin_notice":"大部分命令需要bot位管理员"
+      },
+      {
         "plugin_name": "bot管理",
         "plugin_service_name":"botmanage",
         "plugin_direction": "",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "(自动)被踢提醒alert",
           "description": "bot被qq踢出群qq_group"
@@ -197,6 +227,7 @@
         "plugin_name": "yobot数据库",
         "plugin_service_name":"zfjbot",
         "plugin_direction": "",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "查看数据",
           "description": "查看今日报道数据"
@@ -215,6 +246,7 @@
         "plugin_name": "会战附属功能",
         "plugin_service_name":"priconne",
         "plugin_direction": "",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "pcr速查",
           "description": "pcr的主要攻略和数据站速览"
@@ -246,6 +278,7 @@
         "plugin_name": "公会排名查询",
         "plugin_service_name":"epck",
         "plugin_direction": "",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "会战排名+公会名/排名",
           "description": "查看指定名字或指定排名的公会排名"
@@ -268,6 +301,7 @@
         "plugin_name": "会战报告",
         "plugin_service_name":"离职报告",
         "plugin_direction": "生成会战报告",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "生成离职报告",
           "description": "生成一张离职报告"
@@ -281,6 +315,7 @@
         "plugin_name": "活动日程",
         "plugin_service_name":"日历",
         "plugin_direction": "",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "日历",
           "description": "查看本群订阅服务器日历"
@@ -303,6 +338,7 @@
         "plugin_name": "pcr_wiki",
         "plugin_service_name":"wiki",
         "plugin_direction": "",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "@bot简介<角色>",
           "description": "查询角色简介"
@@ -326,6 +362,17 @@
           "description": "禁用wiki"
         }],
         "plugin_notice":""
+      },
+      {
+        "plugin_name": "jjc场次查询",
+        "plugin_service_name":"zfjbot-jjc-finder",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [{
+          "command": "jjc场次<13位游戏id>",
+          "description": "查询jjc场次"
+        }],
+        "plugin_notice":"数据来源 http://http://jjc-finder.wa.vg/"
       }
     ]
   },
@@ -337,6 +384,7 @@
       "plugin_name": "抽卡",
       "plugin_service_name":"gacha",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "猫猫单抽/十连/来一井",
         "description": "模拟抽卡"
@@ -359,6 +407,7 @@
       "plugin_name": "切噜语",
       "plugin_service_name":"pcr-cherugo",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "切噜一下 <文本>",
         "description": "转换为切噜语"
@@ -372,6 +421,7 @@
       "plugin_name": "签到",
       "plugin_service_name":"pcr-login-bonus",
       "plugin_direction": "给主さま盖章章(随机图样哦)",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "签到",
         "description": "给主さま盖章章(随机图样哦)"
@@ -382,6 +432,7 @@
       "plugin_name": "掷骰子",
       "plugin_service_name":"dice",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": ".r",
         "description": "掷骰子(默认1d100)"
@@ -395,6 +446,7 @@
       "plugin_name": "我问你答",
       "plugin_service_name":"eqa",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "我问A你答B",
         "description": "设置自定义答复(仅对设置人有效)[支持图片回复]"
@@ -414,6 +466,7 @@
       "plugin_name": "reply(自定义回复)",
       "plugin_service_name":"shebot",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "fullmatch<触发词>#<回复>",
         "description": "完全匹配[网页端支持图片回复]"
@@ -433,6 +486,7 @@
       "plugin_name": "表情生成器",
       "plugin_service_name":"表情生成器",
       "plugin_direction": "表情生成器",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "表情列表",
         "description": "查看目前有哪些表情"
@@ -461,9 +515,21 @@
       "plugin_notice":""
     },
     {
+      "plugin_name": "内鬼表情生成器",
+      "plugin_service_name":"有内鬼",
+      "plugin_direction": "内鬼表情生成器",
+      "plugin_state": "",
+      "plugin_commands": [{
+        "command": "/nokia|有内鬼 <文案>",
+        "description": "生成一张内鬼表情包"
+      }],
+      "plugin_notice":""
+    },
+    {
       "plugin_name": "简单识图",
       "plugin_service_name":"picfinder",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "识图+图片",
         "description": "大概率找不到，猫猫真笨"
@@ -474,6 +540,7 @@
       "plugin_name": "点歌",
       "plugin_service_name":"music",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "点歌+歌名",
         "description": "在网易云，qq音乐上搜索歌曲"
@@ -487,6 +554,7 @@
       "plugin_name": "抽签",
       "plugin_service_name":"portune",
       "plugin_direction": "科学抽签",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "抽签|人品|运势|抽凯露签",
         "description": "随机角色/指定凯露预测今日运势"
@@ -497,6 +565,7 @@
       "plugin_name": "猜角色",
       "plugin_service_name":"descgass",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "猜角色",
         "description": "开始小游戏"
@@ -510,6 +579,7 @@
       "plugin_name": "猜头像",
       "plugin_service_name":"avatargass",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "猜头像",
         "description": "开始小游戏"
@@ -523,6 +593,7 @@
       "plugin_name": "猜语音",
       "plugin_service_name":"voiceguess",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "cygames",
         "description": "开始小游戏"
@@ -533,9 +604,24 @@
       "plugin_notice":""
     },
     {
+      "plugin_name": "猜fgo从者",
+      "plugin_service_name":"fgoavatarguess",
+      "plugin_direction": "",
+      "plugin_state": "",
+      "plugin_commands": [{
+        "command": "猜从者",
+        "description": "开始小游戏"
+      },{
+        "command": "猜从者排行榜",
+        "description": "本群排行榜"
+      }],
+      "plugin_notice":""
+    },
+    {
       "plugin_name": "猜明日方舟干员",
       "plugin_service_name":"arkavatarguess",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "猜干员",
         "description": "开始小游戏"
@@ -549,6 +635,7 @@
       "plugin_name": "猜语音-方舟版",
       "plugin_service_name":"voiceguess",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "arknights",
         "description": "开始小游戏"
@@ -562,6 +649,7 @@
       "plugin_name": "猜群友",
       "plugin_service_name":"memberguess",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "猜群友",
         "description": "开始小游戏"
@@ -570,8 +658,9 @@
     },
     {
       "plugin_name": "俄罗斯轮盘",
-      "plugin_service_name":"",
+      "plugin_service_name":"russian",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "俄罗斯轮盘|开枪|rs",
         "description": "第一人命令装弹，其余人命令参与游戏"
@@ -579,9 +668,21 @@
       "plugin_notice":""
     },
     {
+      "plugin_name": "Sogou翻译",
+      "plugin_service_name":"translate",
+      "plugin_direction": "",
+      "plugin_state": "Bug",
+      "plugin_commands": [{
+        "command": "翻译 <待翻译词句>",
+        "description": "翻译"
+      }],
+      "plugin_notice":""
+    },
+    {
       "plugin_name": "网络语翻译",
       "plugin_service_name":"nbnhhsh",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "??<首字母缩写词>",
         "description": "释义"
@@ -592,6 +693,7 @@
       "plugin_name": "随机pcr语音",
       "plugin_service_name":"pcr-record",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "<角色>语音|语音<角色>",
         "description": "随机一句角色语音"
@@ -602,6 +704,7 @@
       "plugin_name": "戳机器人集卡小游戏",
       "plugin_service_name":"poke-man-pcr",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "<戳机器人>",
         "description": "随机获得一张卡片"
@@ -627,6 +730,7 @@
       "plugin_name": "pcr海豹杀手",
       "plugin_service_name":"pcr-seal-killer",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "<游戏出New截图>",
         "description": "海豹 爬"
@@ -643,6 +747,7 @@
       "plugin_name": "rss订阅",
       "plugin_service_name":"rss",
       "plugin_direction": "",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "rss help",
         "description": "查看帮助"
@@ -671,6 +776,7 @@
       "plugin_name": "NgGame",
       "plugin_service_name":"zfjbot-NgGame",
       "plugin_direction": "出自漫画《辉夜大小姐想让我告白～天才们的恋爱头脑战～》，规则为参与游戏的每个玩家为下一个玩家设置一个“NG词”， 设置完成后展示之，使得除了自己的每个人都能知道自己的NG词。之后所有玩家进行自由谈话，说出自己的NG词的玩家判负，退场。直至只剩一人为止。",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "NG词语游戏|NGWordGame|ng",
         "description": "开始ng游戏"
@@ -696,6 +802,7 @@
       "plugin_name": "生成器",
       "plugin_service_name":"generator",
       "plugin_direction": "一些很草的生成器",
+      "plugin_state": "",
       "plugin_commands": [
         {
           "command": "营销号 <主体>/<事件>/<另一种说法>",
@@ -716,27 +823,47 @@
       "plugin_notice":""
     },
     {
+      "plugin_name": "网抑云",
+      "plugin_service_name":"hiumsentences",
+      "plugin_direction": "随机网易云语录",
+      "plugin_state": "",
+      "plugin_commands": [
+        {
+          "command": "(@bot)网抑云时间|上号|生而为人|生不出人|网抑云|已黑化",
+          "description": "随机网易云语录"
+        }],
+      "plugin_notice":""
+    },
+    {
       "plugin_name": "接头霸王",
       "plugin_service_name":"接头霸王",
       "plugin_direction": "猫猫接头",
+      "plugin_state": "",
       "plugin_commands": [{
-        "command": "NG词语游戏|NGWordGame|ng",
+        "command": "接头霸王|接头<图片>",
         "description": "开始ng游戏"
-      },{
-        "command": "sign in",
-        "description": "参与游戏"
-      },{
-        "command": "stop signing",
-        "description": "停止注册"
-      },{
-        "command": "(私聊)setNG<词语>",
-        "description": "设置NG词"
-      },{
-        "command": "check",
-        "description": "加载所有设置的NG词并开始游戏"
-      },{
-        "command": "stop",
-        "description": "强制终止游戏"
+      }],
+      "plugin_notice":""
+    },
+    {
+      "plugin_name": "报时",
+      "plugin_service_name":"报时",
+      "plugin_direction": "nowtime卵用",
+      "plugin_state": "",
+      "plugin_commands": [{
+        "command": "报时|现在几点|几点了|几点啦",
+        "description": "随机报时图片"
+      }],
+      "plugin_notice":""
+    },
+    {
+      "plugin_name": "Rua",
+      "plugin_service_name":"Rua",
+      "plugin_direction": "生成搓揉表情",
+      "plugin_state": "",
+      "plugin_commands": [{
+        "command": "rua<@群友>",
+        "description": "生成搓揉群友表情"
       }],
       "plugin_notice":""
     }
@@ -749,6 +876,7 @@
       "plugin_name": "字符画",
       "plugin_service_name":"",
       "plugin_direction": "生成字符画",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "字符画<图片>",
         "description": "生成字符画"
@@ -759,6 +887,7 @@
       "plugin_name": "梦梦奈自动签到",
       "plugin_service_name":"zfjbot-mimikko",
       "plugin_direction": "梦梦奈自动签到",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "mimikko sign",
         "description": "梦梦奈签到"
@@ -775,6 +904,7 @@
       "plugin_name": "自检插件",
       "plugin_service_name":"check",
       "plugin_direction": "检查服务器状态",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "check|自检",
         "description": "检查"
@@ -790,6 +920,7 @@
       "plugin_name": "setu",
       "plugin_service_name":"涩图",
       "plugin_direction": "好康的图片",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "[1-10][色瑟涩]图",
         "description": "涩图"

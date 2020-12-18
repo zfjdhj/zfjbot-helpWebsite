@@ -26,7 +26,9 @@
     <van-collapse v-model="plugins_list['plugins_type_id']" accordion="true" border="false">
       <van-collapse-item v-for="(plugin,index) in plugins_list['plugins_list']" :key="plugin['id']" :name=index>
         <template #title>
-          <div>{{plugin["plugin_name"]}}</div>
+          <div>{{plugin["plugin_name"]}}
+            <van-tag plain type="danger" v-if="plugin['plugin_state']">{{plugin['plugin_state']}}</van-tag>
+          </div>
         </template>
         <template #value>
           <div>{{plugin["plugin_service_name"]}}</div>
@@ -45,11 +47,30 @@
     <van-button icon="arrow-left" icon-position="left"
                 type="primary" block @click="onCancel">搜索结果</van-button>
       <van-cell-group>
-        <van-cell title="指令" value="功能"/>
-      <van-cell v-for="command in res_list.data" :key="command.id"
-                :title="command.command" :value="command.description"
+        <van-cell value="功能">
+          <template #title>
+            <van-tag plain type="primary" >插件名称</van-tag>
+            <div>
+
+              指令
+            </div>
+          </template>
+        </van-cell>
+
+        <van-cell v-for="command in res_list.data" :key="command.id"
+                :value="command.description"
                 @click="doCopy(command.command)"
-                />
+        >
+          <template #title>
+            <van-tag plain type="primary" >{{command.plugin_name}}</van-tag>
+            <div>
+
+              {{command.command}}
+            </div>
+
+          </template>
+
+        </van-cell>
       </van-cell-group>
   </div>
 </template>
@@ -72,31 +93,37 @@ export default {
       console.log(err);
     })
 
-    function search(data,val,plugin_name,command,data_list){
-      let res_list=data_list
-      if (data){
-        if(typeof data === "object"){
-          for ( let data2 in data){
-            if(data2==="plugin_name"){
-              plugin_name=data[data2]
+    function search(data,val,plugin_name,command,description,data_list) {
+      let res_list = data_list
+      if (data) {
+        if (typeof data === "object") {
+          for (let data2 in data) {
+            if (data2 === "plugin_name") {
+              plugin_name = data[data2]
             }
-            if(data2==="command"){
-              command=data[data2]
+            if (data2 === "command") {
+              command = data[data2]
             }
-            if (data[data2]){
-              search(data[data2], val, plugin_name,command, res_list);
+            if (data2 === "description") {
+              description = data[data2]
+            }
+            if (data[data2]) {
+              // console.log(command, description,typeof data);
+              search(data[data2], val, plugin_name, command, description, res_list);
             }
           }
           return res_list
-        }else if(typeof data === "string" && command && command !== data && data.indexOf(val) > -1){
-            let res_data={
-              "plugin_name":plugin_name,
-              "command":command,
-              "description":data,
-            }
-            res_list.push(res_data)
-            return res_list
-        }else{
+        } else if (typeof data === "string" && command && description
+            && command.indexOf(val) > -1||description.indexOf(val) > -1) {
+          console.log(command, description,typeof data)
+          let res_data = {
+            "plugin_name": plugin_name,
+            "command": command,
+            "description": description
+          }
+          res_list.push(res_data)
+          return res_list
+        } else {
           return res_list
         }
       }
@@ -104,8 +131,9 @@ export default {
     function onSearch(val) {
       if (val) {
         isRes.value=false
-        res_list.data=search(plugins_data, val, "", "", []);
+        res_list.data=search(plugins_data, val, "", "","", []);
         // val.value=""
+        console.log(res_list);
         return res_list
       } else{
         isRes.value=true
