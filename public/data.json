@@ -73,69 +73,6 @@
         "plugin_notice":""
       },
       {
-        "plugin_name": "自动报刀",
-        "plugin_service_name":"clanbattle_info",
-        "plugin_direction": "自动报刀相关，前缀cbi可以替换为自动报刀",
-        "plugin_state": "Broken",
-        "plugin_commands": [
-          {
-            "command": "cbi 帮助",
-            "description": "获取帮助信息"
-          },{
-            "command": "cbi 总表",
-            "description": "查询公会总表"
-          },{
-            "command": "cbi 日总表 [n]",
-            "description": "查询公会日表, n表示会战第n天, 不带n参数默认为第1天"
-          },{
-            "command": "cbi 日出刀表 [n]",
-            "description": "查询公会日表, n表示会战第n天, 不带n参数默认为第1天."
-          },{
-            "command": "cbi boss出刀表 [n]",
-            "description": "查询boss出刀表, n为boss编号, 取值为1-5."
-          },{
-            "command": "cbi boss状态",
-            "description": "查询boss状态"
-          },{
-            "command": "cbi 状态",
-            "description": "查看插件当前状态"
-          },{
-            "command": "cbi 检查成员",
-            "description": "检查公会成员是否全部有对应QQ号码"
-          },{
-            "command": "cbi 绑定 游戏昵称 [bot/@某人]",
-            "description": "将指定游戏昵称绑定本qq号码或者指定qq号码, 适用于游戏昵称和群名片不匹配的情况, 加入bot表示将该昵称绑定为bot自己的qq号码. 如果游戏昵称有空格, 请将昵称放置在[]中"
-          },{
-            "command": "cbi 解除绑定 游戏昵称",
-            "description": "解除绑定"
-          },{
-            "command": "cbi 查看绑定",
-            "description": "查看当前的绑定列表"
-          },{
-            "command": "cbi 绑定未知成员 bot/@某人",
-            "description": "将指定所有找不到对应qq的游戏昵称绑定给指定qq号码, 适用于部分成员不在群内的情况, bot表示将该昵称绑定为bot自己的qq号码,使用该功能必须参照下方常见问题解除yobot出刀限制"
-          },{
-            "command": "cbi 解除绑定未知成员",
-            "description": "禁用上述功能"
-          },{
-            "command": "cbi 继续报刀",
-            "description": "继续自动报刀, 当自动报刀因错误暂停时, 请在排除错误后使用该命令继续报刀"
-          },{
-            "command": "cbi 暂停报刀",
-            "description": "暂停自动报刀"
-          },{
-            "command": "cbi 重置推送进度",
-            "description": "重置推送进度, 下一次将从第一条出刀记录重新开始推送"
-          },{
-            "command": "cbi 重置报刀进度",
-            "description": "重置报刀进度, 从第一条出刀记录重新同步报刀进度, 适用于清空yobot记录后需要重新开始报刀的情况"
-          },{
-            "command": "初始化",
-            "description": "重新加载群数据, 修改config文件后可以使用本指令重新加载数据"
-          }],
-        "plugin_notice":"使用自动报刀的公会, 不能有重名的成员, 插件无法区分同名会员. 如果插件提示未知游戏昵称, 需要使用绑定指令为指定游戏昵称绑定成员qq. 本插件不限制每个qq号码绑定的游戏昵称数量, 但请注意yobot本身的每账号每天3刀的限制, 有特殊需求请自行修改Yobot相关代码"
-      },
-      {
         "plugin_name": "筛刀",
         "plugin_service_name":"筛刀",
         "plugin_direction": "filter_knife",
@@ -668,10 +605,10 @@
       "plugin_notice":""
     },
     {
-      "plugin_name": "Sogou翻译",
+      "plugin_name": "百度翻译",
       "plugin_service_name":"translate",
       "plugin_direction": "",
-      "plugin_state": "Bug",
+      "plugin_state": "",
       "plugin_commands": [{
         "command": "翻译 <待翻译词句>",
         "description": "翻译"
@@ -920,7 +857,7 @@
       "plugin_name": "setu",
       "plugin_service_name":"涩图",
       "plugin_direction": "好康的图片",
-      "plugin_state": "",
+      "plugin_state": "禁用",
       "plugin_commands": [{
         "command": "[1-10][色瑟涩]图",
         "description": "涩图"
@@ -938,6 +875,59 @@
         "description": "r18开启/关闭"
       }],
       "plugin_notice":"注:采用lolicon.api<br>具体图库质量参见官方文档<a href='https://api.lolicon.app/#/setu'>Lolicon API</a><br>目前图量<br>Total:12748,R18:2318,Illustrator:1954</p><p><sup class='footnote'>9</sup>注:搜索没有回复，那就是被tx吞消息了，过段时间再试试吧。"
+    },
+    {
+      "plugin_name": "setu_mix",
+      "plugin_service_name":"涩图",
+      "plugin_direction": "好康的图片",
+      "plugin_state": "",
+      "plugin_commands": [{
+        "command": "涩图",
+        "description": "随机获取1张图片"
+      },{
+        "command": "来n张涩图",
+        "description": "随机获取n张图片"
+      },{
+        "command": "搜[n张]涩图 <keyword>",
+        "description": "搜索[n张]指定关键字的图片"
+      },{
+        "command": "本日涩图排行榜 [page]",
+        "description": "获取p站排行榜"
+      },{
+        "command": "看涩图 [n]",
+        "description": "获取p站排行榜指定排名的图片"
+      },{
+        "command": "看涩图 start end",
+        "description": "获取p站排行榜排名从start到end的全部图片"
+      },{
+        "command": "(管理员)setu set 模块 设置值 [群号]",
+        "description": "修改本群或指定群的设置, 以下为设置项 - 取值 - 说明"
+      },{
+        "command": "setu set acggov on/off",
+        "description": "是否开启acggov模块"
+      },{
+        "command": "setu set lolicon on/off",
+        "description": "是否开启lolicon模块"
+      },{
+        "command": "setu set lolicon_r18 on/off",
+        "description": "是否开启lolicon_r18模块"
+      },{
+        "command": "setu set withdraw n",
+        "description": "发出的图片在n秒后撤回,设置为0表示不撤回. 如果撤回功能异常, 请关闭bot宿主程序的分片发送功能."
+      },{
+        "command": "setu set xml on/off",
+        "description": "(仅支持go-cqhttp)使用cardimage卡片模式发送图片, 注意xml类消息容易触发风控且不支持某些客户端."
+      },{
+        "command": "setu get <群号>",
+        "description": "查看本群或指定群的模块开启状态"
+      },{
+        "command": "setu fetch",
+        "description": "手动从api拉取一批图片存入本地仓库(插件每半小时会自动拉取一次)"
+      },{
+        "command": "setu warehouse",
+        "description": "查询本地仓库图片数量"
+      }],
+      "plugin_notice":"排行榜相关功能需要开启acggov模块"
     }
   ]
 }

@@ -24,7 +24,8 @@
   <div v-for="plugins_list in plugins_data.data" :key="plugins_list.id" v-show="isRes">
     <van-button type="primary" block>{{plugins_list.plugins_type_name}}</van-button>
     <van-collapse v-model="plugins_list['plugins_type_id']" accordion="true" border="false">
-      <van-collapse-item v-for="(plugin,index) in plugins_list['plugins_list']" :key="plugin['id']" :name=index>
+      <van-collapse-item v-for="(plugin,index) in plugins_list['plugins_list']" 
+      :key="plugin['id']" :name=index :disabled="plugin['plugin_state'] == '禁用' ? true:false">
         <template #title>
           <div>{{plugin["plugin_name"]}}
             <van-tag plain type="danger" v-if="plugin['plugin_state']">{{plugin['plugin_state']}}</van-tag>
