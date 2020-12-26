@@ -100,6 +100,18 @@
         "plugin_notice":""
       },
       {
+        "plugin_name": "合刀计算",
+        "plugin_service_name":"合刀",
+        "plugin_direction": "合刀计算",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "合刀 <刀1伤害> <刀2伤害> <剩余血量>",
+            "description": "计算尾刀补偿时间"
+          }],
+        "plugin_notice":""
+      },
+      {
         "plugin_name": "bot群管",
         "plugin_service_name":"groupmaster",
         "plugin_direction": "",
@@ -173,7 +185,28 @@
           "description": "修改某一条报刀数据"
         }],
         "plugin_notice":"修改数据库相关数据，仅限当天"
-      }]
+      },
+      {
+        "plugin_name": "YoCool控制台",
+        "plugin_service_name":"YoCool-Console",
+        "plugin_direction": "实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作",
+        "plugin_state": "Bug",
+        "plugin_commands": [{
+          "command": "一键安装",
+          "description": "使用默认主题快速安装YoCool，也可使用一键安装 主题名来指定安装哪个主题"
+        },{
+          "command": "切换主题",
+          "description": "切换YoCool的主题，使用切换主题 主题名来选择切换到哪个主题"
+        },{
+          "command": "更新YoCool",
+          "description": "更新YoCool到最新版本，指令前带强制可以强制执行本条指令"
+        },{
+          "command": "卸载YoCool",
+          "description": "将YoCool从yobot中卸载，指令前带强制可以强制执行本条指令"
+        }],
+        "plugin_notice":"安装与卸载时，由于移动文件和解压缩，会短时间内堵塞，约5~10秒，具体时间取决于您服务器的IO性能。"
+      }
+    ]
   },
   {
     "plugins_type_id":"2",
@@ -310,6 +343,23 @@
           "description": "查询jjc场次"
         }],
         "plugin_notice":"数据来源 http://http://jjc-finder.wa.vg/"
+      },
+      {
+        "plugin_name": "角色生日查询&提醒",
+        "plugin_service_name":"pcr-birthday-search&reminder",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [{
+          "command": "谁的生日是+生日",
+          "description": "这天哪位'老婆'过生日呢"
+        },{
+          "command": "谁的生日是今天",
+          "description": "看看今天哪位'老婆'过生日呢"
+        },{
+          "command": "角色+的生日是那天",
+          "description": "看看'老婆'的生日是那天"
+        }],
+        "plugin_notice":""
       }
     ]
   },
@@ -811,7 +861,7 @@
   "plugins_list":[
     {
       "plugin_name": "字符画",
-      "plugin_service_name":"",
+      "plugin_service_name":"zfjbot",
       "plugin_direction": "生成字符画",
       "plugin_state": "",
       "plugin_commands": [{
