@@ -345,7 +345,7 @@
         "plugin_notice":"数据来源 http://http://jjc-finder.wa.vg/"
       },
       {
-        "plugin_name": "birthday",
+        "plugin_name": "角色生日查询&提醒",
         "plugin_service_name":"pcr-birthday-search&reminder",
         "plugin_direction": "",
         "plugin_state": "",

@@ -23,20 +23,67 @@
   </van-sticky>
   <div v-for="plugins_list in plugins_data.data" :key="plugins_list.id" v-show="isRes">
     <van-button type="primary" block>{{plugins_list.plugins_type_name}}</van-button>
-    <van-collapse v-model="plugins_list['plugins_type_id']" accordion="true" border="false">
-      <van-collapse-item v-for="(plugin,index) in plugins_list['plugins_list']" 
-      :key="plugin['id']" :name=index :disabled="plugin['plugin_state'] == '禁用' ? true:false">
+    <van-collapse v-model="plugins_list['plugins_type_id']" accordion="true">
+      <van-collapse-item  v-for="(plugin,index) in plugins_list['plugins_list']" 
+                          :key="plugin['id']" 
+                          center
+                          :name=index 
+                          :disabled="plugin['plugin_state'] == '禁用' ? true:false"
+                          >
+                          <!-- @click="scrollTo(plugin['plugin_name'])" -->
+                          
         <template #title>
-          <div>{{plugin["plugin_name"]}}
+          <div :id="plugin['plugin_name']">{{plugin["plugin_name"]}}
             <van-tag plain type="danger" v-if="plugin['plugin_state']">{{plugin['plugin_state']}}</van-tag>
           </div>
         </template>
         <template #value>
           <div>{{plugin["plugin_service_name"]}}</div>
         </template>
-        <van-cell-group border="false">
-          <van-cell title="指令" value="功能"/>
-          <van-cell v-for="command in plugin['plugin_commands']" :key="command.id"
+
+        <van-cell-group border="true" style="border:1px solid pink;">
+          <van-cell title="指令" 
+                    center
+                    value="功能" 
+                    icon="question-o"
+                    @click="doShowNotice()"
+                    />
+          <van-popup  v-model:show="showNotice" 
+                      position="bottom" 
+                      :style="{ height: '45%' }" 
+                      >
+            <div style="margin:25px;">
+              <van-row>
+              <van-col span="3">指令：</van-col>
+              <van-col span="15">用于与bot进行对话</van-col>
+            </van-row>
+            <van-row>
+              <van-col span="3"></van-col>
+              <van-col span="15">指令中'尖括号'为必填项</van-col>
+            </van-row>
+            <van-row>
+              <van-col span="3"></van-col>
+              <van-col span="19">指令中'方括号'为选填项</van-col>
+            </van-row>
+            <van-row>
+              <van-col span="3">功能：</van-col>
+              <van-col span="19">该条指令对应的功能</van-col>
+            </van-row>
+            <van-row>
+              <van-col span="3">Tips：</van-col>
+              <van-col span="19">点击对应指令即可完成复制</van-col>
+            </van-row >
+            <van-row v-if="plugin['plugin_notice']">
+              <van-col span="3">注意：</van-col>
+              <van-col span="19">{{plugin['plugin_notice']}}</van-col>
+            </van-row>
+            </div>
+            
+          </van-popup>
+          
+          <van-cell v-for="command in plugin['plugin_commands']" 
+                    :key="command.id"
+                    center
                     :title="command.command" :value="command.description"
                     @click="doCopy(command.command)"
           />
@@ -48,24 +95,29 @@
     <van-button icon="arrow-left" icon-position="left"
                 type="primary" block @click="onCancel">搜索结果</van-button>
       <van-cell-group>
-        <van-cell value="功能">
+        <van-cell center value="功能">
           <template #title>
             <van-tag plain type="primary" >插件名称</van-tag>
             <div>
-
               指令
             </div>
           </template>
+          <!-- <template #value>
+            <div>
+              功能
+            </div>
+          </template>  -->
         </van-cell>
 
-        <van-cell v-for="command in res_list.data" :key="command.id"
-                :value="command.description"
-                @click="doCopy(command.command)"
+        <van-cell v-for="command in res_list.data" 
+                  :key="command.id"
+                  center
+                  :value="command.description"
+                  @click="doCopy(command.command)"
         >
-          <template #title>
+          <template #title >
             <van-tag plain type="primary" >{{command.plugin_name}}</van-tag>
             <div>
-
               {{command.command}}
             </div>
 
@@ -147,9 +199,14 @@ export default {
     function noticeBarClick(){
       window.location="yobot/help"
     }
+    function doShowNotice(){
+      showNotice.value=true
+    }
+    
     let isRes=ref(true)
     let res_list=reactive({data:""})
     let value=ref("")
+    let showNotice=ref(false)
     console.log(plugins_data);
     return {
       plugins_data,
@@ -160,6 +217,8 @@ export default {
       isRes,
       res_list,
       value,
+      showNotice,
+      doShowNotice,
     }
   },
   data() {
@@ -182,7 +241,13 @@ export default {
           Toast("复制成功")
         }
         document.body.removeChild(_input); // 删除临时实例
+    },
+    scrollTo(id){
+      setTimeout(function (){
+        document.getElementById(id).scrollIntoView();
+        }, 1000);
     }
+    
   },
   components: {
   }
