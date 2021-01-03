@@ -190,7 +190,7 @@
         "plugin_name": "YoCool控制台",
         "plugin_service_name":"YoCool-Console",
         "plugin_direction": "实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作",
-        "plugin_state": "Bug",
+        "plugin_state": "",
         "plugin_commands": [{
           "command": "一键安装",
           "description": "使用默认主题快速安装YoCool，也可使用一键安装 主题名来指定安装哪个主题"
@@ -217,31 +217,32 @@
         "plugin_service_name":"priconne",
         "plugin_direction": "",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "pcr速查",
-          "description": "pcr的主要攻略和数据站速览"
-        },{
-          "command": "bcr速查",
-          "description": "国服萌新攻略"
-        },{
-          "command": "日/台/陆rank表",
-          "description": "查看各服rank推荐表"
-        },{
-          "command": "黄骑充电表",
-          "description": "黄骑1动规律"
-        },{
-          "command": "谁是xcw",
-          "description": "角色别称查询"
-        },{
-          "command": "挖矿计算 +当前名次",
-          "description": "计算剩余可获得的奖励钻石"
-        },{
-          "command": "一个顶俩",
-          "description": "台服接龙小游戏"
-        },{
-          "command": "B/台服新闻",
-          "description": "显示最新的B/台服新闻"
-        }],
+        "plugin_commands": [
+          {
+            "command": "pcr速查",
+            "description": "pcr的主要攻略和数据站速览"
+          },{
+            "command": "bcr速查",
+            "description": "国服萌新攻略"
+          },{
+            "command": "日/台/陆rank表",
+            "description": "查看各服rank推荐表"
+          },{
+            "command": "黄骑充电表",
+            "description": "黄骑1动规律"
+          },{
+            "command": "谁是xcw",
+            "description": "角色别称查询"
+          },{
+            "command": "挖矿计算 +当前名次",
+            "description": "计算剩余可获得的奖励钻石"
+          },{
+            "command": "一个顶俩",
+            "description": "台服接龙小游戏"
+          },{
+            "command": "B/台服新闻",
+            "description": "显示最新的B/台服新闻"
+          }],
         "plugin_notice":""
       },
       {
@@ -249,22 +250,23 @@
         "plugin_service_name":"epck",
         "plugin_direction": "",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "会战排名+公会名/排名",
-          "description": "查看指定名字或指定排名的公会排名"
-        },{
-          "command": "会战锁定+公会名",
-          "description": "绑定本群的公会"
-        },{
-          "command": "会战解锁+公会名",
-          "description": "解绑本群的公会"
-        },{
-          "command": "公会排名",
-          "description": "查询本群绑定的公会的排名信息"
-        },{
-          "command": "(自动)公会排名推送",
-          "description": "每天早5点30分自动推送本群绑定的公会的排名信息"
-        }],
+        "plugin_commands": [
+          {
+            "command": "会战排名+公会名/排名",
+            "description": "查看指定名字或指定排名的公会排名"
+          },{
+            "command": "会战锁定+公会名",
+            "description": "绑定本群的公会"
+          },{
+            "command": "会战解锁+公会名",
+            "description": "解绑本群的公会"
+          },{
+            "command": "公会排名",
+            "description": "查询本群绑定的公会的排名信息"
+          },{
+            "command": "(自动)公会排名推送",
+            "description": "每天早5点30分自动推送本群绑定的公会的排名信息"
+          }],
         "plugin_notice":"请在结束会战后取消公会绑定，并在下一次会战开始前重新绑定，否则非会战期间也会推送排名信息。"
       },
       {
@@ -272,13 +274,14 @@
         "plugin_service_name":"离职报告",
         "plugin_direction": "生成会战报告",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "生成离职报告",
-          "description": "生成一张离职报告"
-        },{
-          "command": "生成会战报告[@某人]",
-          "description": "生成一张会战报告"
-        }],
+        "plugin_commands": [
+          {
+            "command": "生成离职报告",
+            "description": "生成一张离职报告"
+          },{
+            "command": "生成会战报告[@某人]",
+            "description": "生成一张会战报告"
+          }],
         "plugin_notice":"为保证生成合理报告，会战期间尽量保证数据库正确，不要虾报刀"
       },
       {
@@ -286,22 +289,23 @@
         "plugin_service_name":"日历",
         "plugin_direction": "",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "日历",
-          "description": "查看本群订阅服务器日历"
-        },{
-          "command": "[国台日]服日历",
-          "description": "查看指定服务器日程"
-        },{
-          "command": "[国台日]服日历 on/off",
-          "description": "订阅/取消订阅指定服务器的日历推送"
-        },{
-          "command": "日历 time 时:分",
-          "description": "设置日历推送时间"
-        },{
-          "command": "日历 status",
-          "description": "查看本群日历推送设置"
-        }],
+        "plugin_commands": [
+          {
+            "command": "日历",
+            "description": "查看本群订阅服务器日历"
+          },{
+            "command": "[国台日]服日历",
+            "description": "查看指定服务器日程"
+          },{
+            "command": "[国台日]服日历 on/off",
+            "description": "订阅/取消订阅指定服务器的日历推送"
+          },{
+            "command": "日历 time 时:分",
+            "description": "设置日历推送时间"
+          },{
+            "command": "日历 status",
+            "description": "查看本群日历推送设置"
+          }],
         "plugin_notice":""
       },
       {
@@ -309,28 +313,29 @@
         "plugin_service_name":"wiki",
         "plugin_direction": "",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "@bot简介<角色>",
-          "description": "查询角色简介"
-        },{
-          "command": "@bot技能<角色>",
-          "description": "查询角色技能"
-        },{
-          "command": "@bot专武<角色>",
-          "description": "查询角色专武"
-        },{
-          "command": "@bot羁绊<角色>",
-          "description": "查询角色羁绊"
-        },{
-          "command": "更新wiki",
-          "description": "更新wiki数据"
-        },{
-          "command": "启用wiki",
-          "description": "启用wiki"
-        },{
-          "command": "禁用wiki",
-          "description": "禁用wiki"
-        }],
+        "plugin_commands": [
+          {
+            "command": "@bot简介<角色>",
+            "description": "查询角色简介"
+          },{
+            "command": "@bot技能<角色>",
+            "description": "查询角色技能"
+          },{
+            "command": "@bot专武<角色>",
+            "description": "查询角色专武"
+          },{
+            "command": "@bot羁绊<角色>",
+            "description": "查询角色羁绊"
+          },{
+            "command": "更新wiki",
+            "description": "更新wiki数据"
+          },{
+            "command": "启用wiki",
+            "description": "启用wiki"
+          },{
+            "command": "禁用wiki",
+            "description": "禁用wiki"
+          }],
         "plugin_notice":""
       },
       {
@@ -338,27 +343,52 @@
         "plugin_service_name":"zfjbot-jjc-finder",
         "plugin_direction": "",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "jjc场次<13位游戏id>",
-          "description": "查询jjc场次"
-        }],
+        "plugin_commands": [
+          {
+            "command": "jjc场次<13位游戏id>",
+            "description": "查询jjc场次"
+          }],
         "plugin_notice":"数据来源 http://http://jjc-finder.wa.vg/"
+      },{
+        "plugin_name": "jjc作业查询",
+        "plugin_service_name":"zfjbot-arena",
+        "plugin_direction": "作业网查询爬虫版",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "怎么拆|b怎么拆|台怎么拆|日怎么拆|",
+            "description": "查询jjc作业，默认国服"
+          }],
+        "plugin_notice":"数据来源 https://www.pcrdfans.com/"
       },
       {
         "plugin_name": "角色生日查询&提醒",
         "plugin_service_name":"pcr-birthday-search&reminder",
         "plugin_direction": "",
         "plugin_state": "",
-        "plugin_commands": [{
-          "command": "谁的生日是+生日",
-          "description": "这天哪位'老婆'过生日呢"
-        },{
-          "command": "谁的生日是今天",
-          "description": "看看今天哪位'老婆'过生日呢"
-        },{
-          "command": "角色+的生日是那天",
-          "description": "看看'老婆'的生日是那天"
-        }],
+        "plugin_commands": [
+          {
+            "command": "谁的生日是+生日",
+            "description": "这天哪位'老婆'过生日呢"
+          },{
+            "command": "谁的生日是今天",
+            "description": "看看今天哪位'老婆'过生日呢"
+          },{
+            "command": "角色+的生日是那天",
+            "description": "看看'老婆'的生日是那天"
+          }],
+        "plugin_notice":""
+      },
+      {
+        "plugin_name": "指令查询",
+        "plugin_service_name":"zfjbot-helpSearch",
+        "plugin_direction": "检索关键词查询指令",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "帮助 <keyword>",
+            "description": "检索关键词查询指令"
+          }],
         "plugin_notice":""
       }
     ]
@@ -828,7 +858,7 @@
       "plugin_state": "",
       "plugin_commands": [{
         "command": "接头霸王|接头<图片>",
-        "description": "开始ng游戏"
+        "description": "又来了新鲜的身体 ~喵~"
       }],
       "plugin_notice":""
     },
