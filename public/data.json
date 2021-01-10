@@ -349,6 +349,33 @@
             "description": "查询jjc场次"
           }],
         "plugin_notice":"数据来源 http://http://jjc-finder.wa.vg/"
+      },
+      {
+        "plugin_name": "jjc排名推送",
+        "plugin_service_name":"pcrjjc",
+        "plugin_direction": "佑树专业刺必回",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "竞技场绑定 <13位游戏id>",
+            "description": "绑定竞技场排名变动推送（仅下降），默认双场均启用"
+          },{
+            "command": "竞技场查询[ uid]",
+            "description": "查询竞技场简要信息"
+          },{
+            "command": "竞技场订阅状态",
+            "description": "查看排名变动推送绑定状态"
+          },{
+            "command": "停止[公主]竞技场订阅",
+            "description": "停止[公主]战斗竞技场排名变动推送"
+          },{
+            "command": "启用[公主]竞技场订阅",
+            "description": "启用[公主]战斗竞技场排名变动推送"
+          },{
+            "command": "[删除竞技场订阅]",
+            "description": "删除竞技场排名变动推送"
+          }],
+        "plugin_notice":"当前API https://help.tencentbot.top \n备用API http://pcr.zfjdhj.cn/api/pcrjjc"
       },{
         "plugin_name": "jjc作业查询",
         "plugin_service_name":"zfjbot-arena",
@@ -914,7 +941,7 @@
         "command": "mimikko check",
         "description": "检查签到状态"
       }],
-      "plugin_notice":""
+      "plugin_notice":"当前自用，有想法可以告诉纸飞机"
     },
     {
       "plugin_name": "自检插件",
