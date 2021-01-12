@@ -179,7 +179,7 @@
         "plugin_state": "",
         "plugin_commands": [{
           "command": "查看数据",
-          "description": "查看今日报道数据"
+          "description": "查看今日报刀数据"
         },{
           "command": "修改数据 <旧数据> <新数据>",
           "description": "修改某一条报刀数据"
@@ -281,6 +281,15 @@
           },{
             "command": "生成会战报告[@某人]",
             "description": "生成一张会战报告"
+          },{
+            "command": "设置工会api <API地址>",
+            "description": "(需要管理员权限)为本群设置默认的Yobot工会API"
+          },{
+            "command": "查看工会api",
+            "description": "(需要管理员权限)查看本群设置的Yobot API"
+          },{
+            "command": "清除工会api",
+            "description": "(需要管理员权限)清除本群设置的Yobot API"
           }],
         "plugin_notice":"为保证生成合理报告，会战期间尽量保证数据库正确，不要虾报刀"
       },
