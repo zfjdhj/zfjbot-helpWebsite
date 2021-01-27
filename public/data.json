@@ -610,6 +610,23 @@
           }
         ],
         "plugin_notice": ""
+      },
+      {
+        "plugin_name": "公会装备捐助提醒",
+        "plugin_service_name": "zfjbot-equipmentRemind",
+        "plugin_direction": "自动提醒装备捐助",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "equip check",
+            "description": "查看当前时段装备请求"
+          },
+          {
+            "command": "(自动)装备请求提醒",
+            "description": "每当有新请求，或者临近结束仍未完成请求触发"
+          }
+        ],
+        "plugin_notice": "当前自用，有需要@纸飞机"
       }
     ]
   },
@@ -869,6 +886,23 @@
           },
           {
             "command": "猜头像排行榜",
+            "description": "本群排行榜"
+          }
+        ],
+        "plugin_notice": ""
+      },
+      {
+        "plugin_name": "找头像",
+        "plugin_service_name": "pcravatarfind",
+        "plugin_direction": "找出一堆头像中的不同头像",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "找头像",
+            "description": "开始小游戏"
+          },
+          {
+            "command": "找头像排行榜",
             "description": "本群排行榜"
           }
         ],
