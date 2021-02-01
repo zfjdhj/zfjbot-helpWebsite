@@ -1308,6 +1308,30 @@
           {
             "command": "查女友+PCR角色名",
             "description": "可以查询某位pcr角色的归属"
+          },
+          {
+            "command": "分手+PCR角色名",
+            "description": "可以与某位pcr角色分手"
+          },
+          {
+            "command": "声望系统帮助",
+            "description": "查看声望系统帮助"
+          },
+          {
+            "command": "开启声望系统",
+            "description": "国王可以开启声望系统；决斗胜利+200声望，决斗失败-100声望"
+          },
+          {
+            "command": "查询声望",
+            "description": "查询当前声望"
+          },
+          {
+            "command": "加冕仪式",
+            "description": "需要10000声望，5000金币"
+          },
+          {
+            "command": "皇室婚礼+角色名",
+            "description": "需3000声望，3000金币"
           }
         ],
         "plugin_notice": "目前为了方便，通过决斗获得女友是可以超过爵位上限的，这个可以自己修改。"
