@@ -627,6 +627,31 @@
           }
         ],
         "plugin_notice": "当前自用，有需要@纸飞机"
+      },
+      {
+        "plugin_name": "bot授权管理",
+        "plugin_service_name": "zfjbot-auth",
+        "plugin_direction": "bot到期提醒",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "auth check",
+            "description": "查看本群bot信息"
+          },
+          {
+            "command": "(主人)auth all",
+            "description": "所有群的授权信息"
+          },
+          {
+            "command": "auth add [天数]",
+            "description": "为本群增加授权时长"
+          },
+          {
+            "command": "(自动)bot到期提醒",
+            "description": "授权时长低于5天时，进行提醒"
+          }
+        ],
+        "plugin_notice": "当前自用，仅为提醒，有需要@纸飞机"
       }
     ]
   },
@@ -1263,7 +1288,7 @@
         "plugin_name": "PCR贵族决斗",
         "plugin_service_name": "pcr_duel",
         "plugin_direction": "创建贵族进行俄罗斯转盘决斗，提升贵族等级，争夺pcr女友的小游戏。",
-        "plugin_state": "Pre_v0.3",
+        "plugin_state": "Pre_v0.5",
         "plugin_commands": [
           {
             "command": "创建贵族",
@@ -1332,6 +1357,22 @@
           {
             "command": "皇室婚礼+角色名",
             "description": "需3000声望，3000金币"
+          },
+          {
+            "command": "dlc帮助",
+            "description": "查看dlc帮助"
+          },
+          {
+            "command": "dlc列表",
+            "description": "查看dlc介绍"
+          },
+          {
+            "command": "加载|卸载dlc <dlc名>",
+            "description": "加载或者卸载dlc"
+          },
+          {
+            "command": "本群贵族",
+            "description": "查看本群贵族数量以及剩余单身女友"
           }
         ],
         "plugin_notice": "目前为了方便，通过决斗获得女友是可以超过爵位上限的，这个可以自己修改。"
