@@ -623,7 +623,23 @@
           },
           {
             "command": "(自动)装备请求提醒",
-            "description": "每当有新请求，或者临近结束仍未完成请求触发"
+            "description": "每当有新请求，或者临近结束仍未完成时触发"
+          },
+          {
+            "command": "(自动)入会请求提醒",
+            "description": "每当有新请求时触发"
+          },
+          {
+            "command": "invite <13位id>",
+            "description": "有申请则通过,无申请则邀请"
+          },
+          {
+            "command": "invite check",
+            "description": "查看白名单玩家公会信息"
+          },
+          {
+            "command": "invite onekeyaccept",
+            "description": "一键通过白名单入会请求,无申请则邀请"
           }
         ],
         "plugin_notice": "当前自用，有需要@纸飞机"
@@ -1288,7 +1304,7 @@
         "plugin_name": "PCR贵族决斗",
         "plugin_service_name": "pcr_duel",
         "plugin_direction": "创建贵族进行俄罗斯转盘决斗，提升贵族等级，争夺pcr女友的小游戏。",
-        "plugin_state": "v0.6",
+        "plugin_state": "v0.7",
         "plugin_commands": [
           {
             "command": "创建贵族",
@@ -1373,9 +1389,57 @@
           {
             "command": "本群贵族",
             "description": "查看本群贵族数量以及剩余单身女友"
+          },
+          {
+            "command": "好感帮助",
+            "description": "好感系统指令"
+          },
+          {
+            "command": "查好感+女友名",
+            "description": "查看某角色好感度"
+          },
+          {
+            "command": "贵族约会+女友名",
+            "description": "提升好感(1天限1次)"
+          },
+          {
+            "command": "买礼物",
+            "description": "购买礼物用于赠送获得好感(300金币，一天限5次）"
+          },
+          {
+            "command": "送礼+女友名",
+            "description": "赠送礼物获得好感度"
+          },
+          {
+            "command": "用xx与[艾特对象]交换xx",
+            "description": "与群友交换礼物"
+          },
+          {
+            "command": "买情报+女友名",
+            "description": "500金币，可了解女友喜好"
+          },
+          {
+            "command": "礼物仓库",
+            "description": "查询礼物仓库"
+          },
+          {
+            "command": "好感列表",
+            "description": "查询礼物仓库"
+          },
+          {
+            "command": "(限群主)重置金币+qq",
+            "description": "清空个人金币"
+          },
+          {
+            "command": "(限群主)重置角色+qq",
+            "description": "转生"
+          },
+          {
+            "command": "购买上限",
+            "description": "购买上限，增加女友上限"
           }
         ],
-        "plugin_notice": "目前为了方便，通过决斗获得女友是可以超过爵位上限的，这个可以自己修改。"
+        "plugin_notice": "通过约会或者送礼可以提升好感；决斗输掉某女友会扣除50好感，不够则被抢走；与女友结婚需要是皇帝且好感在依恋(300)以上；女友喜好与原角色无关，只是随机生成，仅供娱乐。"
       }
     ]
   },
