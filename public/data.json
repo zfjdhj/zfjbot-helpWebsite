@@ -58,6 +58,10 @@
             "description": "显示boss状态"
           },
           {
+            "command": "进度",
+            "description": "出刀进度"
+          },
+          {
             "command": "预约1 [:留言]",
             "description": "预约boss，当boss出现时通知，有冒号则为留言"
           },
@@ -96,7 +100,7 @@
         "plugin_name": "自动报刀",
         "plugin_service_name": "clanbattle_info",
         "plugin_direction": "自动报刀相关，前缀cbi可以替换为自动报刀",
-        "plugin_state": "Pre",
+        "plugin_state": "",
         "plugin_commands": [
           {
             "command": "cbi 帮助",
@@ -533,7 +537,7 @@
       },
       {
         "plugin_name": "jjc排名推送",
-        "plugin_service_name": "pcrjjc",
+        "plugin_service_name": "竞技场排名推送",
         "plugin_direction": "佑树专业刺必回",
         "plugin_state": "",
         "plugin_commands": [
@@ -837,7 +841,7 @@
           },
           {
             "command": "表情管理@bot",
-            "description": "<a href='http://zfjdhj.cn:9023/meme'>网页操作(仅限我)</a>"
+            "description": "http://zfjdhj.cn:9023/meme"
           }
         ],
         "plugin_notice": ""
@@ -1263,7 +1267,7 @@
       },
       {
         "plugin_name": "报时",
-        "plugin_service_name": "报时",
+        "plugin_service_name": "nowtime",
         "plugin_direction": "nowtime卵用",
         "plugin_state": "",
         "plugin_commands": [
@@ -1302,7 +1306,7 @@
       },
       {
         "plugin_name": "PCR贵族决斗",
-        "plugin_service_name": "pcr_duel",
+        "plugin_service_name": "pcr-duel",
         "plugin_direction": "创建贵族进行俄罗斯转盘决斗，提升贵族等级，争夺pcr女友的小游戏。",
         "plugin_state": "v0.7",
         "plugin_commands": [
@@ -1514,7 +1518,7 @@
             "description": "r18开启/关闭"
           }
         ],
-        "plugin_notice": "注:采用lolicon.api<br>具体图库质量参见官方文档<a href='https://api.lolicon.app/#/setu'>Lolicon API</a><br>目前图量<br>Total:12748,R18:2318,Illustrator:1954</p><p><sup class='footnote'>9</sup>注:搜索没有回复，那就是被tx吞消息了，过段时间再试试吧。"
+        "plugin_notice": "注:采用lolicon.api<br>具体图库质量参见官方文档'https://api.lolicon.app/#/setu'\n注:搜索没有回复，那就是被tx吞消息了，过段时间再试试吧。"
       },
       {
         "plugin_name": "setu_mix",
