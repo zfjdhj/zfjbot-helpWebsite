@@ -1312,7 +1312,7 @@
         "plugin_name": "PCR贵族决斗",
         "plugin_service_name": "pcr-duel",
         "plugin_direction": "创建贵族进行俄罗斯转盘决斗，提升贵族等级，争夺pcr女友的小游戏。",
-        "plugin_state": "魔改会战版6.0",
+        "plugin_state": "魔改会战版II-1.0",
         "plugin_commands": [
           {
             "command": "创建贵族",
@@ -1460,6 +1460,27 @@
           }
         ],
         "plugin_notice": "通过约会或者送礼可以提升好感；决斗输掉某女友会扣除50好感，不够则被抢走；与女友结婚需要是皇帝且好感在依恋(300)以上；女友喜好与原角色无关，只是随机生成，仅供娱乐。"
+      },
+      {
+        "plugin_name": "大头菜交易",
+        "plugin_service_name": "market",
+        "plugin_direction": "大头菜交易市场",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "买入/卖出 商品名*n",
+            "description": " 买卖n个某种商品"
+          },
+          {
+            "command": "市场列表",
+            "description": " 看看市场价格"
+          },
+          {
+            "command": "仓库列表",
+            "description": " 看看仓库还剩啥"
+          }
+        ],
+        "plugin_notice": "大头菜交易市场，与显示股价和虚拟货币挂钩"
       }
     ]
   },
