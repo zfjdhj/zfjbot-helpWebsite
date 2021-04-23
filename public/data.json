@@ -1521,6 +1521,19 @@
           }
         ],
         "plugin_notice": ""
+      },
+      {
+        "plugin_name": "test",
+        "plugin_service_name": "test",
+        "plugin_direction": "test",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "test",
+            "description": "test"
+          }
+        ],
+        "plugin_notice": ""
       }
     ]
   },
