@@ -28,8 +28,15 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: install python
+        uses: actions/setup-python@v2
+        with:
+            # 我tm好笨只能借用py脚本完成一部分功能
+            python-version: '3.8' 
+            
       - name: Install and Build
         run: |
+          python ./docs/script/json2markdown.py
           npm install
           npm run docs:build
           npm run-script build
