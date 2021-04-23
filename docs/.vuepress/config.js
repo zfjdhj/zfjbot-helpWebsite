@@ -1,8 +1,8 @@
 const path = require("path")
-const base_dir = "/yobot/help/"
+const base_dir = "/"
 module.exports = {
 
-    base: "/zfjbot-helpWebsite" + base_dir,
+    base: base_dir,
     dest: "${sourceDir}/../public" + base_dir,
     lang: 'zh-CN',
     title: '猫猫',
