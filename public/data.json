@@ -230,15 +230,15 @@
         "plugin_state": "",
         "plugin_commands": [
           {
-            "command": "<辱骂bot>",
+            "command": "[辱骂bot]",
             "description": "口球8小时"
           },
           {
-            "command": "<gbf链接>",
+            "command": "[gbf链接]",
             "description": "识破骑空士的阴谋"
           },
           {
-            "command": "<chat>",
+            "command": "[chat]",
             "description": "一些关键词回复"
           },
           {
@@ -582,7 +582,7 @@
         "plugin_notice": "数据来源 https://www.pcrdfans.com/"
       },
       {
-        "plugin_name": "角色生日查询&提醒",
+        "plugin_name": "角色生日查询和提醒",
         "plugin_service_name": "pcr-birthday-search&reminder",
         "plugin_direction": "",
         "plugin_state": "",

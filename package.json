@@ -5,24 +5,35 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   },
   "dependencies": {
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.8",
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "vant": "^3.0.0-rc.2",
-    "vue": "^3.0.0"
+    "vue-loader": "^16.1.2",
+    "vuepress-plugin-container": "^2.1.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli": "^5.0.0-alpha.8",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
     "@vue/compiler-sfc": "^3.0.0",
+    "@vuepress/plugin-pwa": "^1.8.2",
+    "@vuepress/plugin-pwa-popup": "^2.0.0-alpha.8",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "less": "^3.12.2",
-    "less-loader": "^7.1.0"
+    "less-loader": "^7.1.0",
+    "vue": "^3.0.11",
+    "vue-server-renderer": "^2.6.12",
+    "vuepress": "^2.0.0-beta.8",
+    "vuepress-plugin-versioning": "git+https://github.com/nonebot/vuepress-plugin-versioning.git"
   },
   "eslintConfig": {
     "root": true,
