@@ -8,7 +8,13 @@ export const data = {
   "headers": [],
   "filePathRelative": "guide/contact.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1619165657000,
+    "contributors": [
+      {
+        "name": "Administrator",
+        "email": "320336328@qq.com",
+        "commits": 1
+      }
+    ]
   }
 }

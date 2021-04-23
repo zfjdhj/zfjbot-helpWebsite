@@ -1,9 +1,9 @@
 const path = require("path")
-const base_dir = "/"
+const base_dir = "/yobot/help/"
 module.exports = {
 
     base: base_dir,
-    dest: "${sourceDir}/../public/yobot/help" + base_dir,
+    dest: "${sourceDir}/../public/" + base_dir,
     lang: 'zh-CN',
     title: '猫猫',
     description: 'PCR公主连结会战机器人',
