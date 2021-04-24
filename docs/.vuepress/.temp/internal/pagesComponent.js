@@ -5,6 +5,7 @@ export const pagesComponent = {
   "/": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/README.vue")),
   "/guide/contact.html": defineAsyncComponent(() => import(/* webpackChunkName: "v-60abe7a5" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/guide/contact.vue")),
   "/guide/faq.html": defineAsyncComponent(() => import(/* webpackChunkName: "v-37e1c06f" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/guide/faq.vue")),
+  "/guide/fast_config.html": defineAsyncComponent(() => import(/* webpackChunkName: "v-10ace460" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/guide/fast_config.vue")),
   "/guide/plan.html": defineAsyncComponent(() => import(/* webpackChunkName: "v-214b57e4" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/guide/plan.vue")),
   "/guide/purchase.html": defineAsyncComponent(() => import(/* webpackChunkName: "v-7e2edb0c" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/guide/purchase.vue")),
   "/guide/": defineAsyncComponent(() => import(/* webpackChunkName: "v-fffb8e28" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/pages/guide/README.vue")),

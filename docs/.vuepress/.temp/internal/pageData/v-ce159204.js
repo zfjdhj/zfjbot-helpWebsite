@@ -27,13 +27,26 @@ export const data = {
   ],
   "filePathRelative": "changelog.md",
   "git": {
-    "updatedTime": 1619165657000,
+    "updatedTime": 1619169714000,
     "contributors": [
       {
         "name": "Administrator",
         "email": "320336328@qq.com",
-        "commits": 1
+        "commits": 2
       }
     ]
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

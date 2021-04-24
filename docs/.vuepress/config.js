@@ -1,5 +1,5 @@
 const path = require("path")
-const base_dir = "/yobot/help/"
+const base_dir = "/zfjbot/help/"
 module.exports = {
 
     base: base_dir,
@@ -48,6 +48,9 @@ module.exports = {
                                 }, {
                                     text: '版本对比',
                                     link: '/guide/plan.md',
+                                }, {
+                                    text: '快速配置',
+                                    link: '/guide/fast_config.md',
                                 }]
                         },
                         {

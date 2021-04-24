@@ -9,6 +9,10 @@ export const data = {
     "tagline": "PCR公主连结会战机器人",
     "actions": [
       {
+        "text": "快速配置",
+        "link": "/guide/fast_config.md"
+      },
+      {
         "text": "开始使用",
         "link": "/guide/"
       }
@@ -42,4 +46,17 @@ export const data = {
       }
     ]
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

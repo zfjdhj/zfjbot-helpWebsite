@@ -74,6 +74,7 @@
 </tbody>
 </table>
 <h2 id="会战报告"><a class="header-anchor" href="#会战报告">#</a> 会战报告</h2>
+<h3 id="生成会战报告"><a class="header-anchor" href="#生成会战报告">#</a> 生成会战报告</h3>
 <table>
 <thead>
 <tr>
@@ -190,6 +191,7 @@
 </tbody>
 </table>
 <h2 id="jjc排名推送"><a class="header-anchor" href="#jjc排名推送">#</a> jjc排名推送</h2>
+<h3 id="佑树专业刺必回"><a class="header-anchor" href="#佑树专业刺必回">#</a> 佑树专业刺必回</h3>
 <table>
 <thead>
 <tr>
@@ -225,6 +227,7 @@
 </tbody>
 </table>
 <h2 id="jjc作业查询"><a class="header-anchor" href="#jjc作业查询">#</a> jjc作业查询</h2>
+<h3 id="作业网查询爬虫版"><a class="header-anchor" href="#作业网查询爬虫版">#</a> 作业网查询爬虫版</h3>
 <table>
 <thead>
 <tr>
@@ -239,7 +242,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="角色生日查询-提醒"><a class="header-anchor" href="#角色生日查询-提醒">#</a> 角色生日查询&amp;提醒</h2>
+<h2 id="角色生日查询和提醒"><a class="header-anchor" href="#角色生日查询和提醒">#</a> 角色生日查询和提醒</h2>
 <table>
 <thead>
 <tr>
@@ -263,6 +266,7 @@
 </tbody>
 </table>
 <h2 id="指令查询"><a class="header-anchor" href="#指令查询">#</a> 指令查询</h2>
+<h3 id="检索关键词查询指令"><a class="header-anchor" href="#检索关键词查询指令">#</a> 检索关键词查询指令</h3>
 <table>
 <thead>
 <tr>
@@ -278,6 +282,7 @@
 </tbody>
 </table>
 <h2 id="公会装备捐助提醒"><a class="header-anchor" href="#公会装备捐助提醒">#</a> 公会装备捐助提醒</h2>
+<h3 id="自动提醒装备捐助"><a class="header-anchor" href="#自动提醒装备捐助">#</a> 自动提醒装备捐助</h3>
 <table>
 <thead>
 <tr>
@@ -313,6 +318,7 @@
 </tbody>
 </table>
 <h2 id="bot授权管理"><a class="header-anchor" href="#bot授权管理">#</a> bot授权管理</h2>
+<h3 id="bot到期提醒"><a class="header-anchor" href="#bot到期提醒">#</a> bot到期提醒</h3>
 <table>
 <thead>
 <tr>

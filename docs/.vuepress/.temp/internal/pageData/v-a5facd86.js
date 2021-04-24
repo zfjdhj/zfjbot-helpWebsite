@@ -10,13 +10,27 @@ export const data = {
       "level": 2,
       "title": "setu",
       "slug": "setu",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "好康的图片",
+          "slug": "好康的图片",
+          "children": []
+        }
+      ]
     },
     {
       "level": 2,
       "title": "setu_mix",
       "slug": "setu-mix",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "好康的图片",
+          "slug": "好康的图片-1",
+          "children": []
+        }
+      ]
     }
   ],
   "filePathRelative": "zfjbot/plugins_type_5.md",
@@ -30,4 +44,17 @@ export const data = {
       }
     ]
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

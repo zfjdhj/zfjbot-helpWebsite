@@ -626,6 +626,10 @@
             "description": "查看当前时段装备请求"
           },
           {
+            "command": "invite auto",
+            "description": "切换自动捐助开关"
+          },
+          {
             "command": "(自动)装备请求提醒",
             "description": "每当有新请求，或者临近结束仍未完成时触发"
           },
@@ -644,6 +648,10 @@
           {
             "command": "invite onekeyaccept",
             "description": "一键通过白名单入会请求,无申请则邀请"
+          },
+          {
+            "command": "/pcrval <32位验证码数据>",
+            "description": "账号失效后过验证码"
           }
         ],
         "plugin_notice": "当前自用，有需要@纸飞机"

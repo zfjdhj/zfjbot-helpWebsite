@@ -3,7 +3,10 @@ home: true
 # title: 猫猫
 heroImage: /images/logo.png
 tagline: PCR公主连结会战机器人
+
 actions:
+  - text: 快速配置
+    link: /guide/fast_config.md
   - text: 开始使用
     link: /guide/
 features:

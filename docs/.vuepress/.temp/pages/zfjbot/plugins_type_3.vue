@@ -50,6 +50,7 @@
 </tbody>
 </table>
 <h2 id="签到"><a class="header-anchor" href="#签到">#</a> 签到</h2>
+<h3 id="给主さま盖章章-随机图样哦"><a class="header-anchor" href="#给主さま盖章章-随机图样哦">#</a> 给主さま盖章章(随机图样哦)</h3>
 <table>
 <thead>
 <tr>
@@ -138,6 +139,7 @@
 </tbody>
 </table>
 <h2 id="表情生成器"><a class="header-anchor" href="#表情生成器">#</a> 表情生成器</h2>
+<h3 id="表情生成器-1"><a class="header-anchor" href="#表情生成器-1">#</a> 表情生成器</h3>
 <table>
 <thead>
 <tr>
@@ -181,6 +183,7 @@
 </tbody>
 </table>
 <h2 id="内鬼表情生成器"><a class="header-anchor" href="#内鬼表情生成器">#</a> 内鬼表情生成器</h2>
+<h3 id="内鬼表情生成器-1"><a class="header-anchor" href="#内鬼表情生成器-1">#</a> 内鬼表情生成器</h3>
 <table>
 <thead>
 <tr>
@@ -230,6 +233,7 @@
 </tbody>
 </table>
 <h2 id="抽签"><a class="header-anchor" href="#抽签">#</a> 抽签</h2>
+<h3 id="科学抽签"><a class="header-anchor" href="#科学抽签">#</a> 科学抽签</h3>
 <table>
 <thead>
 <tr>
@@ -283,6 +287,7 @@
 </tbody>
 </table>
 <h2 id="找头像"><a class="header-anchor" href="#找头像">#</a> 找头像</h2>
+<h3 id="找出一堆头像中的不同头像"><a class="header-anchor" href="#找出一堆头像中的不同头像">#</a> 找出一堆头像中的不同头像</h3>
 <table>
 <thead>
 <tr>
@@ -554,6 +559,7 @@
 </tbody>
 </table>
 <h2 id="nggame"><a class="header-anchor" href="#nggame">#</a> NgGame</h2>
+<h3 id="出自漫画《辉夜大小姐想让我告白-天才们的恋爱头脑战-》-规则为参与游戏的每个玩家为下一个玩家设置一个-ng词-设置完成后展示之-使得除了自己的每个人都能知道自己的ng词。之后所有玩家进行自由谈话-说出自己的ng词的玩家判负-退场。直至只剩一人为止。"><a class="header-anchor" href="#出自漫画《辉夜大小姐想让我告白-天才们的恋爱头脑战-》-规则为参与游戏的每个玩家为下一个玩家设置一个-ng词-设置完成后展示之-使得除了自己的每个人都能知道自己的ng词。之后所有玩家进行自由谈话-说出自己的ng词的玩家判负-退场。直至只剩一人为止。">#</a> 出自漫画《辉夜大小姐想让我告白～天才们的恋爱头脑战～》，规则为参与游戏的每个玩家为下一个玩家设置一个“NG词”， 设置完成后展示之，使得除了自己的每个人都能知道自己的NG词。之后所有玩家进行自由谈话，说出自己的NG词的玩家判负，退场。直至只剩一人为止。</h3>
 <table>
 <thead>
 <tr>
@@ -589,6 +595,7 @@
 </tbody>
 </table>
 <h2 id="生成器"><a class="header-anchor" href="#生成器">#</a> 生成器</h2>
+<h3 id="一些很草的生成器"><a class="header-anchor" href="#一些很草的生成器">#</a> 一些很草的生成器</h3>
 <table>
 <thead>
 <tr>
@@ -620,6 +627,7 @@
 </tbody>
 </table>
 <h2 id="网抑云"><a class="header-anchor" href="#网抑云">#</a> 网抑云</h2>
+<h3 id="随机网易云语录"><a class="header-anchor" href="#随机网易云语录">#</a> 随机网易云语录</h3>
 <table>
 <thead>
 <tr>
@@ -635,6 +643,7 @@
 </tbody>
 </table>
 <h2 id="接头霸王"><a class="header-anchor" href="#接头霸王">#</a> 接头霸王</h2>
+<h3 id="猫猫接头"><a class="header-anchor" href="#猫猫接头">#</a> 猫猫接头</h3>
 <table>
 <thead>
 <tr>
@@ -650,6 +659,7 @@
 </tbody>
 </table>
 <h2 id="报时"><a class="header-anchor" href="#报时">#</a> 报时</h2>
+<h3 id="nowtime卵用"><a class="header-anchor" href="#nowtime卵用">#</a> nowtime卵用</h3>
 <table>
 <thead>
 <tr>
@@ -665,6 +675,7 @@
 </tbody>
 </table>
 <h2 id="rua"><a class="header-anchor" href="#rua">#</a> Rua</h2>
+<h3 id="生成搓揉表情"><a class="header-anchor" href="#生成搓揉表情">#</a> 生成搓揉表情</h3>
 <table>
 <thead>
 <tr>
@@ -680,6 +691,7 @@
 </tbody>
 </table>
 <h2 id="字符画"><a class="header-anchor" href="#字符画">#</a> 字符画</h2>
+<h3 id="生成字符画"><a class="header-anchor" href="#生成字符画">#</a> 生成字符画</h3>
 <table>
 <thead>
 <tr>
@@ -695,6 +707,7 @@
 </tbody>
 </table>
 <h2 id="pcr贵族决斗"><a class="header-anchor" href="#pcr贵族决斗">#</a> PCR贵族决斗</h2>
+<h3 id="创建贵族进行俄罗斯转盘决斗-提升贵族等级-争夺pcr女友的小游戏。"><a class="header-anchor" href="#创建贵族进行俄罗斯转盘决斗-提升贵族等级-争夺pcr女友的小游戏。">#</a> 创建贵族进行俄罗斯转盘决斗，提升贵族等级，争夺pcr女友的小游戏。</h3>
 <table>
 <thead>
 <tr>
@@ -850,6 +863,7 @@
 </tbody>
 </table>
 <h2 id="大头菜交易"><a class="header-anchor" href="#大头菜交易">#</a> 大头菜交易</h2>
+<h3 id="大头菜交易市场"><a class="header-anchor" href="#大头菜交易市场">#</a> 大头菜交易市场</h3>
 <table>
 <thead>
 <tr>

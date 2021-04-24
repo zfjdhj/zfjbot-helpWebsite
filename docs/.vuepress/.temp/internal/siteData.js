@@ -1,5 +1,5 @@
 export const siteData = {
-  "base": "/yobot/help/",
+  "base": "/zfjbot/help/",
   "lang": "zh-CN",
   "title": "猫猫",
   "description": "PCR公主连结会战机器人",
@@ -27,4 +27,17 @@ export const siteData = {
     ]
   ],
   "locales": {}
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSiteData) {
+    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ siteData }) => {
+    __VUE_HMR_RUNTIME__.updateSiteData(siteData)
+  })
 }

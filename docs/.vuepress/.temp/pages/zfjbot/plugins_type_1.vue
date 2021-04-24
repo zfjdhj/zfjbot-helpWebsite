@@ -1,5 +1,6 @@
 <template><h1 id="会战相关"><a class="header-anchor" href="#会战相关">#</a> 会战相关</h1>
 <h2 id="会战管理"><a class="header-anchor" href="#会战管理">#</a> 会战管理</h2>
+<h3 id="会战核心功能"><a class="header-anchor" href="#会战核心功能">#</a> 会战核心功能</h3>
 <table>
 <thead>
 <tr>
@@ -95,6 +96,7 @@
 </tbody>
 </table>
 <h2 id="自动报刀"><a class="header-anchor" href="#自动报刀">#</a> 自动报刀</h2>
+<h3 id="自动报刀相关-前缀cbi可以替换为自动报刀"><a class="header-anchor" href="#自动报刀相关-前缀cbi可以替换为自动报刀">#</a> 自动报刀相关，前缀cbi可以替换为自动报刀</h3>
 <table>
 <thead>
 <tr>
@@ -178,6 +180,7 @@
 </tbody>
 </table>
 <h2 id="筛刀"><a class="header-anchor" href="#筛刀">#</a> 筛刀</h2>
+<h3 id="filter-knife"><a class="header-anchor" href="#filter-knife">#</a> filter_knife</h3>
 <table>
 <thead>
 <tr>
@@ -213,6 +216,7 @@
 </tbody>
 </table>
 <h2 id="合刀计算"><a class="header-anchor" href="#合刀计算">#</a> 合刀计算</h2>
+<h3 id="合刀计算-1"><a class="header-anchor" href="#合刀计算-1">#</a> 合刀计算</h3>
 <table>
 <thead>
 <tr>
@@ -310,6 +314,7 @@
 </tbody>
 </table>
 <h2 id="yobot数据库"><a class="header-anchor" href="#yobot数据库">#</a> yobot数据库</h2>
+<h3 id="yobot数据库的增删改查"><a class="header-anchor" href="#yobot数据库的增删改查">#</a> yobot数据库的增删改查</h3>
 <table>
 <thead>
 <tr>
@@ -337,6 +342,7 @@
 </tbody>
 </table>
 <h2 id="yocool控制台"><a class="header-anchor" href="#yocool控制台">#</a> YoCool控制台</h2>
+<h3 id="实现yocool的一键安装、切换主题、升级、卸载等便捷管理操作"><a class="header-anchor" href="#实现yocool的一键安装、切换主题、升级、卸载等便捷管理操作">#</a> 实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作</h3>
 <table>
 <thead>
 <tr>

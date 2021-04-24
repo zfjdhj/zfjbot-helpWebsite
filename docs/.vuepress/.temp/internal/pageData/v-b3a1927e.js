@@ -10,25 +10,53 @@ export const data = {
       "level": 2,
       "title": "会战管理",
       "slug": "会战管理",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "会战核心功能",
+          "slug": "会战核心功能",
+          "children": []
+        }
+      ]
     },
     {
       "level": 2,
       "title": "自动报刀",
       "slug": "自动报刀",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "自动报刀相关，前缀cbi可以替换为自动报刀",
+          "slug": "自动报刀相关-前缀cbi可以替换为自动报刀",
+          "children": []
+        }
+      ]
     },
     {
       "level": 2,
       "title": "筛刀",
       "slug": "筛刀",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "filter_knife",
+          "slug": "filter-knife",
+          "children": []
+        }
+      ]
     },
     {
       "level": 2,
       "title": "合刀计算",
       "slug": "合刀计算",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "合刀计算",
+          "slug": "合刀计算-1",
+          "children": []
+        }
+      ]
     },
     {
       "level": 2,
@@ -46,13 +74,27 @@ export const data = {
       "level": 2,
       "title": "yobot数据库",
       "slug": "yobot数据库",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "yobot数据库的增删改查",
+          "slug": "yobot数据库的增删改查",
+          "children": []
+        }
+      ]
     },
     {
       "level": 2,
       "title": "YoCool控制台",
       "slug": "yocool控制台",
-      "children": []
+      "children": [
+        {
+          "level": 3,
+          "title": "实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作",
+          "slug": "实现yocool的一键安装、切换主题、升级、卸载等便捷管理操作",
+          "children": []
+        }
+      ]
     }
   ],
   "filePathRelative": "zfjbot/plugins_type_1.md",
@@ -66,4 +108,17 @@ export const data = {
       }
     ]
   }
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
 }

@@ -12,7 +12,7 @@ def open_jsonfile(path):
         return json.load(fp)
 
 
-## 整体放入一个md文件
+## planB：整体放入一个md文件
 def style_1(md_path):
     if os.path.exists(md_path):
         os.remove(md_path)
@@ -46,7 +46,7 @@ def style_1(md_path):
                     )
 
 
-## 按type分离分拣
+## 当前使用：按type分离分拣
 def style_2(md_path):
     if os.path.exists(md_path):
         os.remove(md_path)
@@ -64,6 +64,8 @@ def style_2(md_path):
                 for plugin in plugin_list:
                     print(plugin["plugin_name"])
                     f_type.write(f"\n## {plugin['plugin_name']}\n\n")
+                    if plugin["plugin_direction"]:
+                        f_type.write(f"### {plugin['plugin_direction']}\n\n")
                     print(plugin["plugin_service_name"])
                     print(plugin["plugin_direction"])
                     print(len(plugin["plugin_commands"]))

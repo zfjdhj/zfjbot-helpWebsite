@@ -3,6 +3,7 @@ export const pagesData = {
   "/": () => import(/* webpackChunkName: "v-8daa1a0e" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-8daa1a0e.js").then(({ data }) => data),
   "/guide/contact.html": () => import(/* webpackChunkName: "v-60abe7a5" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-60abe7a5.js").then(({ data }) => data),
   "/guide/faq.html": () => import(/* webpackChunkName: "v-37e1c06f" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-37e1c06f.js").then(({ data }) => data),
+  "/guide/fast_config.html": () => import(/* webpackChunkName: "v-10ace460" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-10ace460.js").then(({ data }) => data),
   "/guide/plan.html": () => import(/* webpackChunkName: "v-214b57e4" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-214b57e4.js").then(({ data }) => data),
   "/guide/purchase.html": () => import(/* webpackChunkName: "v-7e2edb0c" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-7e2edb0c.js").then(({ data }) => data),
   "/guide/": () => import(/* webpackChunkName: "v-fffb8e28" */"W:/github/zfjbot-helpWebsite/docs/.vuepress/.temp/internal/pageData/v-fffb8e28.js").then(({ data }) => data),
