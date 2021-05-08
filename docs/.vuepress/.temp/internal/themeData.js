@@ -49,6 +49,10 @@ export const themeData = {
               {
                 "text": "版本对比",
                 "link": "/guide/plan.md"
+              },
+              {
+                "text": "快速配置",
+                "link": "/guide/fast_config.md"
               }
             ]
           },

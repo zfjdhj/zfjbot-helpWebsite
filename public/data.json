@@ -66,6 +66,10 @@
             "description": "预约boss，当boss出现时通知，有冒号则为留言"
           },
           {
+            "command": "预约表",
+            "description": "查看所有boss预约情况"
+          },
+          {
             "command": "挂树 [:留言]",
             "description": "挂树，当boss被击败时通知"
           },
@@ -76,6 +80,10 @@
           {
             "command": "取消预约1 / 取消1",
             "description": "取消预约"
+          },
+          {
+            "command": "清空预约[1-5]",
+            "description": "清空预约"
           },
           {
             "command": "申请出刀",
@@ -423,6 +431,10 @@
           {
             "command": "(自动)公会排名推送",
             "description": "每天早5点30分自动推送本群绑定的公会的排名信息"
+          },
+          {
+            "command": "会战排名 stop",
+            "description": "插件停用(用于游戏长草时段)"
           }
         ],
         "plugin_notice": "请在结束会战后取消公会绑定，并在下一次会战开始前重新绑定，否则非会战期间也会推送排名信息。"
@@ -564,6 +576,10 @@
           {
             "command": "删除竞技场订阅",
             "description": "删除竞技场排名变动推送"
+          },
+          {
+            "command": "jjc stop",
+            "description": "插件停用(用于游戏维护时段)"
           }
         ],
         "plugin_notice": "当前API https://help.tencentbot.top \n备用API http://pcr.zfjdhj.cn/api/pcrjjc"
@@ -626,8 +642,12 @@
             "description": "查看当前时段装备请求"
           },
           {
-            "command": "invite auto",
+            "command": "equip auto",
             "description": "切换自动捐助开关"
+          },
+          {
+            "command": "equip stop",
+            "description": "插件停用(用于游戏维护时段)"
           },
           {
             "command": "(自动)装备请求提醒",
@@ -647,6 +667,10 @@
           },
           {
             "command": "invite onekeyaccept",
+            "description": "一键通过白名单入会请求,无申请则邀请"
+          },
+          {
+            "command": "invite onekeykick",
             "description": "一键通过白名单入会请求,无申请则邀请"
           },
           {
@@ -1489,6 +1513,27 @@
           }
         ],
         "plugin_notice": "大头菜交易市场，与显示股价和虚拟货币挂钩"
+      },
+      {
+        "plugin_name": "坎公主_插件整合",
+        "plugin_service_name": "kgz_plugin",
+        "plugin_direction": "坎公主相关插件",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "启用 kgz_arena_reminder",
+            "description": "坎公主jjc提醒，只是11点45分 18点45分提醒击剑"
+          },
+          {
+            "command": "猫猫坎公主单抽/十连/来一井",
+            "description": "坎公主模拟抽卡v1"
+          },
+          {
+            "command": "坎游[武器]单抽|十连|百连|三百连",
+            "description": "坎公主模拟抽卡v2"
+          }
+        ],
+        "plugin_notice": "坎公主相关插件"
       }
     ]
   },

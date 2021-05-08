@@ -5,7 +5,7 @@ export default [
     name: "v-5d698451",
     path: "/guide/yobot_clanbattle.html",
     component: Vuepress,
-    meta: { title: "Todo" },
+    meta: { title: "yobot公会战流程与操作手册" },
   },
   {
     path: "/guide/yobot_clanbattle.md",

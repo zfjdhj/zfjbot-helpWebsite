@@ -5,7 +5,7 @@ export default [
     name: "v-60abe7a5",
     path: "/guide/contact.html",
     component: Vuepress,
-    meta: { title: "Todo" },
+    meta: { title: "联系维护" },
   },
   {
     path: "/guide/contact.md",

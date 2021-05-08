@@ -8,7 +8,7 @@ export const siteData = {
       "link",
       {
         "rel": "icon",
-        "href": "/images/logo.png"
+        "href": "/zfjbot/help//images/logo.png"
       }
     ],
     [

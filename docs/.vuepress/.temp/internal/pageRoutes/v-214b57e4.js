@@ -5,7 +5,7 @@ export default [
     name: "v-214b57e4",
     path: "/guide/plan.html",
     component: Vuepress,
-    meta: { title: "Todo" },
+    meta: { title: "版本对比" },
   },
   {
     path: "/guide/plan.md",

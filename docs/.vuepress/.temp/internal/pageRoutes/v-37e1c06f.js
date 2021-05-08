@@ -5,7 +5,7 @@ export default [
     name: "v-37e1c06f",
     path: "/guide/faq.html",
     component: Vuepress,
-    meta: { title: "Todo" },
+    meta: { title: "常见问题" },
   },
   {
     path: "/guide/faq.md",

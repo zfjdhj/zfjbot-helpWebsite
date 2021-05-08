@@ -99,12 +99,12 @@ export const data = {
   ],
   "filePathRelative": "zfjbot/plugins_type_1.md",
   "git": {
-    "updatedTime": 1619165657000,
+    "updatedTime": 1619253532000,
     "contributors": [
       {
         "name": "Administrator",
         "email": "320336328@qq.com",
-        "commits": 1
+        "commits": 2
       }
     ]
   }

@@ -1,15 +1,21 @@
 export const data = {
   "key": "v-10ace460",
   "path": "/guide/fast_config.html",
-  "title": "Todo",
+  "title": "快速配置",
   "lang": "zh-CN",
   "frontmatter": {},
   "excerpt": "",
   "headers": [],
   "filePathRelative": "guide/fast_config.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1619253532000,
+    "contributors": [
+      {
+        "name": "Administrator",
+        "email": "320336328@qq.com",
+        "commits": 1
+      }
+    ]
   }
 }
 
