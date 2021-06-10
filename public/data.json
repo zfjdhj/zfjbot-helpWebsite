@@ -417,6 +417,10 @@
             "description": "查看指定名字或指定排名的公会排名"
           },
           {
+            "command": "会战排名 分数线",
+            "description": "查询档线"
+          },
+          {
             "command": "会战锁定+公会名",
             "description": "绑定本群的公会"
           },
@@ -554,27 +558,27 @@
         "plugin_state": "",
         "plugin_commands": [
           {
-            "command": "竞技场绑定 <13位游戏id>",
-            "description": "绑定竞技场排名变动推送（仅下降），默认双场均启用"
+            "command": "[台]竞技场绑定 <13/9位游戏id>",
+            "description": "绑定竞技场排名变动推送（仅下降），不加‘台’默认国服(下同)"
           },
           {
-            "command": "竞技场查询[ uid]",
+            "command": "[台]竞技场查询[ uid]",
             "description": "查询竞技场简要信息"
           },
           {
-            "command": "竞技场订阅状态",
+            "command": "[台]竞技场订阅状态",
             "description": "查看排名变动推送绑定状态"
           },
           {
-            "command": "停止[公主]竞技场订阅",
+            "command": "[台]停止[公主]竞技场订阅",
             "description": "停止[公主]战斗竞技场排名变动推送"
           },
           {
-            "command": "启用[公主]竞技场订阅",
+            "command": "[台]启用[公主]竞技场订阅",
             "description": "启用[公主]战斗竞技场排名变动推送"
           },
           {
-            "command": "删除竞技场订阅",
+            "command": "[台]删除竞技场订阅",
             "description": "删除竞技场排名变动推送"
           },
           {
