@@ -715,6 +715,10 @@
           {
             "command": "disable|禁用|关闭",
             "description": "禁用指定服务"
+          },
+          {
+            "command": "https://yobot.zfjdhj.cn/manage/login",
+            "description": "(主人)服务管理web版"
           }
         ],
         "plugin_notice": "大部分命令主人有效"
