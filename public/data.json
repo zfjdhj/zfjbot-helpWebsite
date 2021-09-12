@@ -1569,6 +1569,19 @@
           }
         ],
         "plugin_notice": "坎公主相关插件"
+      },
+      {
+        "plugin_name": "塔罗牌",
+        "plugin_service_name": "tarot",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "塔罗牌",
+            "description": "揭晓你的命运"
+          }
+        ],
+        "plugin_notice": "杜绝封建迷信，仅供娱乐。"
       }
     ]
   },
