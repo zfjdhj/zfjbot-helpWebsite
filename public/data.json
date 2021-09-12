@@ -143,8 +143,12 @@
             "description": "检查公会成员是否全部有对应QQ号码"
           },
           {
-            "command": "cbi 绑定 游戏昵称 [bot/@某人]",
+            "command": "cbi 绑定 游戏昵称 [@某人]",
             "description": "将指定游戏昵称绑定本qq号码或者指定qq号码, 适用于游戏昵称和群名片不匹配的情况, 加入bot表示将该昵称绑定为bot自己的qq号码. 如果游戏昵称有空格, 请将昵称放置在[]中"
+          },
+          {
+            "command": "cbi 绑定bot 游戏昵称",
+            "description": "同上, 区别为将指定昵称绑定给bot自己的qq号码."
           },
           {
             "command": "cbi 解除绑定 游戏昵称",
@@ -230,84 +234,6 @@
           }
         ],
         "plugin_notice": ""
-      },
-      {
-        "plugin_name": "bot群管",
-        "plugin_service_name": "groupmaster",
-        "plugin_direction": "",
-        "plugin_state": "",
-        "plugin_commands": [
-          {
-            "command": "[辱骂bot]",
-            "description": "口球8小时"
-          },
-          {
-            "command": "[gbf链接]",
-            "description": "识破骑空士的阴谋"
-          },
-          {
-            "command": "[chat]",
-            "description": "一些关键词回复"
-          },
-          {
-            "command": "(自动)group_increase|group_decrease.leave",
-            "description": "入群欢迎，退群通知"
-          },
-          {
-            "command": "(自动)random-repeater",
-            "description": "随机复读"
-          },
-          {
-            "command": "精致睡眠|给我来一份精致昏睡下午茶套餐",
-            "description": "禁言一定时长"
-          }
-        ],
-        "plugin_notice": "大部分命令需要bot为管理员"
-      },
-      {
-        "plugin_name": "bot管理",
-        "plugin_service_name": "botmanage",
-        "plugin_direction": "",
-        "plugin_state": "",
-        "plugin_commands": [
-          {
-            "command": "(自动)被踢提醒alert",
-            "description": "bot被qq踢出群qq_group"
-          },
-          {
-            "command": "broadcast|bc|广播 <内容>",
-            "description": "多用来广播xp"
-          },
-          {
-            "command": "清理数据",
-            "description": "清理Image文件夹，慎用"
-          },
-          {
-            "command": "来杯咖啡<内容>",
-            "description": "反馈内容 联系维护组"
-          },
-          {
-            "command": "help|帮助|幫助",
-            "description": "显示 帮助"
-          },
-          {
-            "command": "(私聊)ls -g|-f|-s <服务名称>|-b",
-            "description": "列出群信息或好友信息或服务信息或bot信息"
-          },
-          {
-            "command": "lssv|服务列表|功能列表 [-a|-h|-g <群号>]",
-            "description": "列出服务 所有|隐藏|指定群"
-          },
-          {
-            "command": "enable|启用|开启|打开 <服务名>",
-            "description": "启用指定服务"
-          },
-          {
-            "command": "disable|禁用|关闭",
-            "description": "禁用指定服务"
-          }
-        ],
-        "plugin_notice": "大部分命令主人有效"
       },
       {
         "plugin_name": "yobot数据库",
@@ -708,6 +634,111 @@
           }
         ],
         "plugin_notice": "当前自用，仅为提醒，有需要@纸飞机"
+      }
+    ]
+  },
+  {
+    "plugins_type_id": "6",
+    "plugins_type_name": "管理",
+    "plugins_list": [
+      {
+        "plugin_name": "bot群管",
+        "plugin_service_name": "groupmaster",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "[辱骂bot]",
+            "description": "口球8小时"
+          },
+          {
+            "command": "[gbf链接]",
+            "description": "识破骑空士的阴谋"
+          },
+          {
+            "command": "[chat]",
+            "description": "一些关键词回复"
+          },
+          {
+            "command": "(自动)group_increase|group_decrease.leave",
+            "description": "入群欢迎，退群通知"
+          },
+          {
+            "command": "(自动)random-repeater",
+            "description": "随机复读"
+          },
+          {
+            "command": "精致睡眠|给我来一份精致昏睡下午茶套餐",
+            "description": "禁言一定时长"
+          }
+        ],
+        "plugin_notice": "大部分命令需要bot为管理员"
+      },
+      {
+        "plugin_name": "bot管理",
+        "plugin_service_name": "botmanage",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "(自动)被踢提醒alert",
+            "description": "bot被qq踢出群qq_group"
+          },
+          {
+            "command": "broadcast|bc|广播 <内容>",
+            "description": "多用来广播xp"
+          },
+          {
+            "command": "清理数据",
+            "description": "清理Image文件夹，慎用"
+          },
+          {
+            "command": "来杯咖啡<内容>",
+            "description": "反馈内容 联系维护组"
+          },
+          {
+            "command": "help|帮助|幫助",
+            "description": "显示 帮助"
+          },
+          {
+            "command": "(私聊)ls -g|-f|-s <服务名称>|-b",
+            "description": "列出群信息或好友信息或服务信息或bot信息"
+          },
+          {
+            "command": "lssv|服务列表|功能列表 [-a|-h|-g <群号>]",
+            "description": "列出服务 所有|隐藏|指定群"
+          },
+          {
+            "command": "enable|启用|开启|打开 <服务名>",
+            "description": "启用指定服务"
+          },
+          {
+            "command": "disable|禁用|关闭",
+            "description": "禁用指定服务"
+          }
+        ],
+        "plugin_notice": "大部分命令主人有效"
+      },
+      {
+        "plugin_name": "定时提醒",
+        "plugin_service_name": "reminder",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "--time=<cron表达式> --rmd=<提醒内容>",
+            "description": "设置定时提醒。时间表达式为cron格式，空格与;分隔均可"
+          },
+          {
+            "command": "--rmd-list",
+            "description": "查看当前群聊/私聊定时提醒列表及其id"
+          },
+          {
+            "command": "--rmd-del=<提醒ID>",
+            "description": "删除对应id定时提醒；"
+          }
+        ],
+        "plugin_notice": "大部分命令主人有效"
       }
     ]
   },
@@ -1628,8 +1659,8 @@
         "plugin_notice": "注:采用lolicon.api<br>具体图库质量参见官方文档'https://api.lolicon.app/#/setu'\n注:搜索没有回复，那就是被tx吞消息了，过段时间再试试吧。"
       },
       {
-        "plugin_name": "setu_mix",
-        "plugin_service_name": "涩图",
+        "plugin_name": "涩图",
+        "plugin_service_name": "setu",
         "plugin_direction": "好康的图片",
         "plugin_state": "",
         "plugin_commands": [
