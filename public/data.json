@@ -730,6 +730,10 @@
             "description": "设置定时提醒。时间表达式为cron格式，空格与;分隔均可"
           },
           {
+            "command": "cron表达式5元素参考: 分;时;日;月;星期",
+            "description": "例子：1;*;*;*;*(01分提醒)*/5;*;*;*;*(每5分提醒)"
+          },
+          {
             "command": "--rmd-list",
             "description": "查看当前群聊/私聊定时提醒列表及其id"
           },
@@ -1579,6 +1583,19 @@
           {
             "command": "塔罗牌",
             "description": "揭晓你的命运"
+          }
+        ],
+        "plugin_notice": "杜绝封建迷信，仅供娱乐。"
+      },
+      {
+        "plugin_name": "人生重来模拟器",
+        "plugin_service_name": "人生重来模拟器",
+        "plugin_direction": "",
+        "plugin_state": "",
+        "plugin_commands": [
+          {
+            "command": "/remake 或 人生重来",
+            "description": "重启你的命运"
           }
         ],
         "plugin_notice": "杜绝封建迷信，仅供娱乐。"
