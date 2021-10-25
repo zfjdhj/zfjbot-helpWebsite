@@ -508,6 +508,10 @@
             "description": "删除竞技场排名变动推送"
           },
           {
+            "command": "[台]pcr玩家信息[ uid]",
+            "description": "查看玩家信息"
+          },
+          {
             "command": "jjc stop",
             "description": "插件停用(用于游戏维护时段)"
           }
@@ -1490,7 +1494,7 @@
             "description": "购买礼物用于赠送获得好感(300金币，一天限5次）"
           },
           {
-            "command": "送礼+女友名",
+            "command": "送礼+女友名+礼物名",
             "description": "赠送礼物获得好感度"
           },
           {
@@ -1507,7 +1511,7 @@
           },
           {
             "command": "好感列表",
-            "description": "查询礼物仓库"
+            "description": "查询女友好感列表"
           },
           {
             "command": "(限群主)重置金币+qq",
